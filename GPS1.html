@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>GPS</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*1}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+	<h1>GPS - Monitor</h1>
+	<table>
+	<col style="width:25%"><col style="width:25%;color:${GRAY_IN_ADLS};">
+		<tr>
+			<th>Parameter - General</th>
+			<th>Value</th>
+		</tr>
+		<tr>
+			<td>GPS Health</td>
+			<td>${ACU_Online_BIT*4}</td>
+		</tr>
+		<tr>
+			<td>Internal GPS Receiver</td>
+			<td>${GPS_Internal}</td>
+		</tr>
+		</table>
+<br>
+	<table>
+	<col style="width:25%"><col style="width:25%;color:${GRAY_IN_MANUAL};">
+		<tr>
+			<th>Parameter - GPS</th>
+			<th>Value</th>
+		</tr>
+		<tr>
+			<td>Satellites in view</td>
+			<td>${ACU_Read*376}</td>
+		</tr>
+		<tr>
+			<td>HDOP</td>
+			<td>${ACU_Read*377}</td>
+		</tr>
+		<tr>
+			<td>Day</td>
+			<td>${ACU_Read*379}</td>
+		</tr>
+		<tr>
+			<td>Month</td>
+			<td>${ACU_Read*37A}</td>
+		</tr>
+		<tr>
+			<td>Year</td>
+			<td>${ACU_Read*37B}</td>
+		</tr>
+		<tr>
+			<td>Time [sec.]</td>
+			<td>${ACU_Read*D}</td>
+		</tr>
+		<tr>
+			<td>Latitude [deg.]</td>
+			<td>${ACU_Read*25D}</td>
+		</tr>
+		<tr>
+			<td>Longitude [deg.]</td>
+			<td>${ACU_Read*25E}</td>
+		</tr>
+		<tr>
+			<td>Altitude [m.]</td>
+			<td>${ACU_Read*25F}</td>
+		</tr>
+		</table>
+<br>
+	<table>
+	<col style="width:25%"><col style="width:25%;color:${GRAY_IN_GPS};">
+		<tr>
+			<th>Parameter - Manual</th>
+			<th>Value</th>
+		</tr>
+		<tr>
+			<td>Latitude [deg.]</td>
+			<td>${ACU_Read*342}</td>
+		</tr>
+		<tr>
+			<td>Longitude [deg.]</td>
+			<td>${ACU_Read*343}</td>
+		</tr>
+		<tr>
+			<td>Altitude [m.]</td>
+			<td>${ACU_Read*344}</td>
+		</tr>
+		</table>
+</body>
+</html>

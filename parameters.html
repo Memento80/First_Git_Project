@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Parameters</title>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+<style type="text/css">
+ input { font-family:monospace; }
+</style>
+</head>
+<body>
+<h1>Parameters - ${Ver_xDLS}</h1>
+${Param_Response} 
+<br>
+<table style="background-color:white; border-style:none;width:100%">
+<col style="width:50%"><col style="width:50%">
+	<tr style="border-style:none;">
+		<td style="border-style:none; height:100%;">
+			<table style="height:100%;">
+			<col style="width:20%"><col style="width:65%"><col style="width:15%">
+				<tr>
+					<th>Board</th>
+					<th>Over Temp. Threshold [C°]</th>
+					<th>Action</th>
+				</tr>
+			 	<tr><form method=post>
+					<td>Encryptor</td>
+					<td><input type="text" value="${OT_Thresh*0}" name="OT_Thresh*0" size="6" /></td>
+					<td><input type="submit" value="Set" name="Set_OT_Thresh"></td>
+				</form></tr>
+			 	<tr><form method=post>
+					<td>TRCV</td>
+					<td><input type="text" value="${OT_Thresh*1}" name="OT_Thresh*1" size="6" /></td>
+					<td><input type="submit" value="Set" name="Set_OT_Thresh"></td>
+				</form></tr>
+			</table>
+		</td>
+	<td>
+		<table style="height:100%;">
+			<col style="width:20%"><col style="width:65%"><col style="width:15%">
+			<tr>
+				<th>Board</th>
+				<th>Over Temp. Threshold [C°]</th>
+				<th>Action</th>
+			</tr>
+		 	<tr><form method=post>
+				<td>FE</td>
+				<td><input type="text" value="${OT_Thresh*2}" name="OT_Thresh*2" size="6" /></td>
+				<td><input type="submit" value="Set" name="Set_OT_Thresh"></td>
+			</form></tr>
+		 	<tr><form method=post>
+				<td>DAC</td>
+				<td><input type="text" value="${OT_Thresh*3}" name="OT_Thresh*3" size="6" /></td>
+				<td><input type="submit" value="Set" name="Set_OT_Thresh"></td>
+			</form></tr>
+		</table>
+	</td>
+</tr>
+</table>
+<br>
+<table>
+<col style="width:30%"><col style="width:60%"><col style="width:10%">
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+		<th>Action</th>
+	</tr>
+ 	<tr><form method=post>
+		<td>TCXO Vtune</td>
+		<td><input type="text" value="${TCXO}" name="TCXO" size="6" /></td>
+		<td><input type="submit" value="Set" name="Set_TCXO"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>Log Periodic Statistics</td>
+			<td>
+				<input type="radio" value="0" ${SWLogger*0} name="SWLogger">None&nbsp;&nbsp;
+         		<input type="radio" value="1" ${SWLogger*1} name="SWLogger">Every 2 Sec.&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="2" ${SWLogger*2} name="SWLogger">Every 1 Min. </td>
+		<td><input type="submit" value="Set" name="Set_SWLogger"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>Operator Note</td>
+		<td><input type="text" name="OperNote" size="20" /></td>
+		<td><input type="submit" value="Log" name="Set_OperNote"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>ARC Acq. Downlink MOO</td>
+		<td><input type="text" value="${ArcAcqDownMoo}" name="ArcAcqDownMoo" size="6" /></td>
+		<td><input type="submit" value="Set" name="Set_ArcAcqDownMoo"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>ARC rate timeout</td>
+		<td><input type="text" value="${ArcRateTimeout}" name="ArcRateTimeout" size="6" /> msec</td>
+		<td><input type="submit" value="Set" name="Set_ArcRateTimeout"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>ARC MOO hold time</td>
+		<td><input type="text" value="${ArcMooHoldTime}" name="ArcMooHoldTime" size="6" /> msec</td>
+		<td><input type="submit" value="Set" name="Set_ArcMooHoldTime"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>Disable ARC</td>
+		<td><input type="checkbox" name="ArcDisable" value=1 ${ArcDisable}></td>
+		<td><input type="submit" value="Set" name="Set_ArcDisable"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>Enable APC</td>
+		<td><input type="checkbox" name="ApcEnable" value=1 ${ApcEnable}></td>
+		<td><input type="submit" value="Set" name="Set_ApcEnable"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>TX Atten. when APC Off</td>
+		<td><input type="text" value="${TRCV_DCA_Param}" name="TRCV_DCA_Param" size="3" /> 0-31 db </td>
+		<td><input type="submit" value="Set" name="Set_TRCV_DCA_Param"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>Auto Tx Enable Timeout</td>
+		<td><input type="text" value="${AutoTxEnable}" name="AutoTxEnable" size="3" /> Sec.</td>
+		<td><input type="submit" value="Set" name="Set_AutoTxEnable"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>Auto Tx Disable Timeout</td>
+		<td><input type="text" value="${AutoTxDisable}" name="AutoTxDisable" size="3" /> Sec.</td>
+		<td><input type="submit" value="Set" name="Set_AutoTxDisable"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>Single Pass FIFO Size</td>
+		<td><input type="text" value="${SinglePassFIFO}" name="SinglePassFIFO" size="6" />&nbsp;KB&nbsp;(1-20,480)</td>
+		<td><input type="submit" value="Set" name="Set_SinglePassFIFO"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>Enable RSSI Table</td>
+		<td><input type="checkbox" name="Enable_RSSI_TABLE" value=1 ${Enable_RSSI_TABLE}></td>
+		<td><input type="submit" value="Set" name="Set_Enable_RSSI_TABLE"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>RSSI Default Delta</td>
+		<td>
+		<input type="text" value="${RSSI_Default_Delta}" name="RSSI_Default_Delta" size="8" />&nbsp; (when table is disabled)</td>
+		<td><input type="submit" value="Set" name="Set_RSSI_Default_Delta"></td>
+	</form></tr>
+</table>
+</body>
+</html>

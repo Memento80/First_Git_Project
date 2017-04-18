@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>Compass</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*1}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>Compass - Monitor<font size="3">(<a target=_top href="FramesetStatEC.html">Goto Compass Statistics</a>)</font></h1>
+	<table>
+		<tr>
+			<th style="width:50%">Compass Monitor</th>
+			<th style="width:50%">Value</th>
+		</tr>
+		<tr>
+			<td>Compass Version</td>
+			<td>${EC_Ver}</td>
+		</tr>
+		<tr>
+			<td>Compass Communication Status</td>
+			<td>${EC_Comm_status}</td>
+		</tr>
+		<tr>
+			<td>Compass Heading [deg.]</td>
+			<td>${EC_Heading}</td>
+		</tr>
+		<tr>
+			<td>Northing Command</td>
+			<td>${EC_NorthCommand}</td>
+		</tr>
+		<tr>
+			<td>Manual Compass [deg.] (Relative to pedestal zero)</td>
+			<td>${ACU_ReadManualNorthing}</td>
+		</tr>
+		<tr>
+			<td>Magnetic Variation [deg.]</td>
+			<td>${ACU_Read*373}</td>
+		</tr>
+		<tr>
+			<td>North Refinement</td>
+			<td>${EC_True_North}</td>
+		</tr>
+	</table>
+	<br>
+	<table>
+		<tr>
+			<th style="width:50%">Pedestal</th>
+			<th style="width:50%">Value</th>
+		</tr>
+		<tr>
+			<td>Pedestal Yaw [deg.]</td>
+			<td>${ACU_Read*37C}</td>
+		</tr>
+		<tr>
+			<td>Pedestal Pitch [deg.]</td>
+			<td>${ACU_Read*150}</td>
+		</tr>
+		<tr>
+			<td>Pedestal Roll [deg.]</td>
+			<td>${ACU_Read*151}</td>
+		</tr>
+	</table>
+	<br>
+<table style="background-color:white; border-style:none;width:100%">
+<col style="width:50%"><col style="width:50%">
+<tr style="border-style:none;">
+<td style="border-style:none; height:100%;">
+	<table style="height:100%;">
+	<col style="width:70%"><col style="width:30%">
+		<tr>
+			<th style="width:50%">Installation Alarm</th>
+			<th style="width:50%">Value</th>
+		</tr>
+		<tr>
+			<td>Low HDOP</td>
+			<td>${EC387*0}</td>
+		</tr>
+		<tr>
+			<td>LLA Changed from Last Power-up</td>
+			<td>${EC387*1}</td>
+		</tr>
+		<tr>
+			<td>Inclinometer Disabled</td>
+			<td>${EC387*2}</td>
+		</tr>
+		<tr>
+			<td>Critical Leveling</td>
+			<td>${EC387*3}</td>
+		</tr>
+		<tr>
+			<td>Stable Leveling</td>
+			<td>${EC387*4}</td>
+		</tr>
+		<tr>
+			<td>North Changed from Last Power-up</td>
+			<td>${EC387*5}</td>
+		</tr>
+		<tr>
+			<td>Compass Comm. </td>
+			<td>${EC387*6}</td>
+		</tr>
+	</table>
+</td>
+<td style="border-style:none; height:100%;">
+	<table style="height:100%;">
+	<col style="width:70%"><col style="width:30%">
+		<tr>
+			<th style="width:50%">Installation Alarm</th>
+			<th style="width:50%">Value</th>
+		</tr>
+		<tr>
+			<td>Compass Read Not Valid</td>
+			<td>${EC387*7}</td>
+		</tr>
+		<tr>
+			<td>Inclinometer Dynamics</td>
+			<td>${EC387*8}</td>
+		</tr>
+		<tr>
+			<td>Stabilization Disabled</td>
+			<td>${EC387*9}</td>
+		</tr>
+		<tr>
+			<td>Maintenance</td>
+			<td>${EC387*10}</td>
+		</tr>
+		<tr>
+			<td>Azimuth MP Inertial Alarm</td>
+			<td>${EC387*11}</td>
+		</tr>
+		<tr>
+			<td>Elevation MP Inertial Alarm</td>
+			<td>${EC387*12}</td>
+		</tr>
+		<tr>
+			<td>Precise North Alarm</td>
+			<td>${EC387*13}</td>
+		</tr>
+	</table>
+</td>
+</tr>
+</table>
+	<fieldset><legend>Calibration Results</legend>${EC_Calibr_results}</fieldset>
+</body>
+</html>

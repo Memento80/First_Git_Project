@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>BIT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*1}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>BIT - Monitor</h1>
+<table>
+<col style="width:20%"><col style="width:17%"><col style="width:17%;background-color:#ddffff""><col style="width:23%"><col style="width:23%;background-color:#ddffff"">
+	<tr>
+		<th>Parameter</th>
+		<th>Local Health</th>
+		<th>Remote Health</th>
+		<th>Local Temperature</th>
+		<th>Remote Temperature</th>
+	</tr>
+	<tr>
+		<td><a target="_top" title="Goto Encryptor screen" href="FramesetEncryptor.html">Encryptor</a></td>
+		<td>${BIT_Enc_Health}</td>
+		<td>${RBIT_Enc_Health}</td>
+		<td>${BIT_Enc_Temp}</td>
+		<td>${RBIT_Enc_Temp}</td>
+	</tr>
+	<tr>
+		<td height="23"><a target="_top" title="Goto monitor display" href="FramesetMonitor.html">TRCV</a></td>
+		<td height="23">${BIT_TRCV_Health}</td>
+		<td height="23">${RBIT_TRCV_Health}</td>
+		<td height="23">${BIT_TRCV_Temp}</td>
+		<td height="23">${RBIT_TRCV_Temp}</td>
+	</tr>
+	<tr>
+		<td><a target="_top" title="Goto RF screen" href="FramesetRF.html">RF</a></td>
+		<td>${BIT_FE_Health}</td>
+		<td>${RBIT_FE_Health}</td>
+		<td>${BIT_FE_Temp}</td>
+		<td>${RBIT_FE_Temp}</td>
+	</tr>
+	<tr>
+		<td>${AAP_ACU_href} </td>
+		<td>${BIT_AAP_ACU_Health}</td>
+		<td>${RBIT_AAP_ACU_Health}</td>
+		<td>${BIT_AAP_ACU_Temp}</td>
+		<td>${RBIT_AAP_ACU_Temp}</td>
+	</tr>
+	<tr>
+		<td><a target="_top" title="Goto Compass screen" href="FramesetEC.html">Compass</a></td>
+		<td>${BIT_Compass_Health}</td>
+		<td>${RBIT_Compass_Health}</td>
+		<td>NA</td>
+		<td>NA</td>
+	</tr>
+	<tr>
+		<td>DAC</a></td>
+		<td>${DAC_ALARMS}</td>
+		<td>NA</td>
+		<td>${DAC_TEMP}</td>
+		<td>NA</td>
+	</tr>	
+	<tr>
+		<td>Antenna PLL LD</td>
+		<td>${BIT_Ant_LD}</td>
+		<td>${RBIT_Ant_LD}</td>
+		<td>NA</td>
+		<td>NA</td>
+	</tr>
+	<tr>
+		<td>IBIT Result (Ant. LB)</td>
+		<td>${BIT_IBIT_Res}</td>
+		<td>${RBIT_IBIT_Res}</td>
+		<td>NA</td>
+		<td>NA</td>
+	</tr>
+	<tr>
+		<td>AAP IBIT</td>
+		<td>${AAP_IBIT_Status}</td>
+		<td>NA</td>
+		<td>NA</td>
+		<td>NA</td>
+	</tr>
+	<tr>
+		<td><a target="_top" title="Goto Compass screen" href="FramesetEC.html">Install Alarms</a></td>
+		<td>${EC_Install_Or}</td>
+		<td>NA</td>
+		<td>NA</td>
+		<td>NA</td>
+	</tr>
+	<tr>
+		<td>WatchDog</td>
+		<td>${WD}</td>
+		<td>${RWD}</td>
+		<td>NA</td>
+		<td>NA</td>
+ 	</tr>
+</table>
+</body>
+</html>

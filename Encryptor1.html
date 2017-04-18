@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Encryptor</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*1}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>Encryptor - Monitor  <font size="3"> (<a target=_top href="FramesetStatEncryptor.html">Goto Encryptor Statistics</a>)</font></h1>
+<table>
+<col style="width:34%"><col style="width:33%"><col style="width:33%;background-color:#ddffff">
+	<tr>
+		<th>Parameter</th>
+		<th>Local</th>
+		<th>Remote</th>
+	</tr>
+	<tr>
+		<td>Communication Status</td>
+		<td>${EncComm}</td>
+		<td>${REncComm}</td>
+	</tr>
+	<tr>
+		<td>Keys Loaded</td>
+		<td>${EncKLoad}</td>
+		<td>${REncKLoad}</td>
+	</tr>
+	<tr>
+		<td>Tx Key Integrity</td>
+		<td>${EncTx}</td>
+		<td>${REncTx}</td>
+	</tr>
+	<tr>
+		<td>Rx Key Integrity</td>
+		<td>${EncRx}</td>
+		<td>${REncRx}</td>
+	</tr>
+	<tr>
+		<td>Key Mismatch Flag</td>
+		<td> ${Keymismatch}<br>
+		Count = ${KeymismatchCount}</td>
+		<td> NA&nbsp; </td>
+	</tr>
+	<tr>
+		<td>Modem to Master Drop</td>
+		<td>${EncDropMod}</td>
+		<td>${REncDropMod}</td>
+	</tr>
+	<tr>
+		<td>Master to Modem Drop</td>
+		<td>${EncDropMas}</td>
+		<td>${REncDropMas}</td>
+	</tr>
+</table>
+</body>
+</html>

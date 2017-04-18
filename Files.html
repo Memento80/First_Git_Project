@@ -1,0 +1,89 @@
+﻿<html>
+<head>
+<title>Files</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>Files</h1>
+<table ><col style="width:50%">
+	<tr>
+		<th>
+		<p align="left">File to Download</th>
+	</tr>
+	<tr>
+		<td><a title="Right-Click for saving the Logfile to disk: Save-Target-As" href="$:/logfile.csv">Logfile</a></td>
+	</tr>
+	<tr>
+		    <td><a title="Right-Click for saving the FE Phase Shift Calibration table to disk: Save-Target-As" href="$:/ps_caltab.txt">FE Phase Shift Calibration table</a></td>
+	</tr>
+	<tr>
+		    <td><a title="Right-Click for saving the FE Output Power Calibration table to disk: Save-Target-As" href="$:/op_caltab.txt">FE Output Power Calibration table</a></td>
+	</tr>
+	<tr>
+		    <td><a title="Right-Click for saving the RSSI Calibration table to disk: Save-Target-As" href="$:/rssi_caltab.txt">RSSI Calibration table</a></td>
+	</tr>
+	<tr>
+		    <td><a title="Right-Click for saving the I-DC Offset Calibration table to disk: Save-Target-As" href="$:/i_dc_offset_caltab.txt">I-DC Offset Calibration table</a></td>
+	</tr>
+	<tr>
+		    <td><a title="Right-Click for saving the Q-DC Offset Calibration table to disk: Save-Target-As" href="$:/q_dc_offset_caltab.txt">Q-DC Offset Calibration table</a></td>
+	</tr>
+	<tr>
+		    <td><a title="Right-Click for saving the Tx I-AMP Offset Calibration table to disk: Save-Target-As" href="$:/tx_i_amp_offset_caltab.txt">Tx I-AMP Offset Calibration table</a></td>
+	</tr>
+	<tr>
+		    <td><a title="Right-Click for saving the Tx Q-AMP Offset Calibration table to disk: Save-Target-As" href="$:/tx_q_amp_offset_caltab.txt">Tx Q-AMP Offset Calibration table</a></td>
+	</tr>	
+	<tr>
+		    <td><a title="Right-Click for saving the Tx Phase Offset Calibration table to disk: Save-Target-As" href="$:/tx_phase_offset_caltab.txt">Tx Phase Offset Calibration table</a></td>
+	</tr>
+	<tr>
+		    <td><a title="Right-Click for saving the Rx Phase Offset Calibration table to disk: Save-Target-As" href="$:/rx_phase_offset_caltab.txt">Rx Phase Offset Calibration table</a></td>
+	</tr>			
+</table>
+<br>
+<table ><col style="width:20%"><col style="width:20%"><col style="width:10%">
+	<tr>
+		<th>
+		<p align="left">Calibration Table</th>
+		<th>
+		<p align="left">Enable Periodic Update</th>
+		<th>
+		<p align="left">Action</th>
+	</tr>
+	<tr><form method=post>
+		<td>I_DC, Q_DC
+		</td>
+		<td>
+			<input type="radio" value="1" ${I_Q_DC_Enable*1} name="I_Q_DC_Enable">Enable&nbsp;&nbsp;
+       		<input type="radio" value="0" ${I_Q_DC_Enable*0} name="I_Q_DC_Enable">Disable</td>
+		<td>
+			<input type="submit" value="Set" name="Set_I_Q_DC_Enable">
+		</td>
+	</form></tr>
+	<tr><form method=post>
+	    <td>Tx_I_Amp, Tx_Q_Amp, TX_Phase
+	    </td>
+		<td>
+			<input type="radio" value="1" ${Tx_I_Q_Amp_Phase_Enable*1} name="Tx_I_Q_Amp_Phase_Enable">Enable&nbsp;&nbsp;
+       		<input type="radio" value="0" ${Tx_I_Q_Amp_Phase_Enable*0} name="Tx_I_Q_Amp_Phase_Enable">Disable</td>
+		<td>
+			<input type="submit" value="Set" name="Set_Tx_I_Q_Amp_Phase_Enable">
+		</td>
+	</form></tr>
+	<tr><form method=post>
+	    <td>RX_Phase
+	    </td>
+		<td>
+			<input type="radio" value="1" ${Rx_Phase_Enable*1} name="Rx_Phase_Enable">Enable&nbsp;&nbsp;
+       		<input type="radio" value="0" ${Rx_Phase_Enable*0} name="Rx_Phase_Enable">Disable</td>
+		<td>
+			<input type="submit" value="Set" name="Set_Rx_Phase_Enable">
+		</td>
+	</form></tr>			
+</table>
+<br>
+${Param_Response} 
+</body>
+</html>

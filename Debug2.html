@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>Debug</title>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>Debug - Control</h1>
+<table style="background-color:white; border-style:none;width:100%">
+<col style="width:50%"><col style="width:50%">
+	<tr style="border-style:none;">
+		<td style="border-style:none; height:100%;">
+			<table style="height:100%;">
+			<col style="width:20%"><col style="width:15%"><col style="width:15%">
+				<tr>
+					<th>Parameter</th>
+					<th>Value</th>
+					<th>Operation</th>
+				</tr>
+				<tr><form method=post>
+				    <td>Reg #&nbsp; <input name="Deb_ReadReg*0" size="3" value="${Deb_RReq*0}"><br>
+				        Reg #&nbsp; <input name="Deb_ReadReg*1" size="3" value="${Deb_RReq*1}"></td>
+			        <td>&nbsp;</td>
+			        <td>
+			            <input type="submit" value="Read Reg. " name="Read_Reg"></td>
+			    </form></tr>
+				<tr><form method=post>
+				    <td>Correction Dir.</td>
+			        <td>FFU</td>
+			        <td>
+							<input type="submit" value="Direction" name="Deb_Set_Dir"></td>
+				</form></tr>
+				<tr><form method=post>
+				    <td>RX MUX</td>
+			        <td><select size="1" name="Deb_Mux">
+							<option ${Deb_MuxSel*0} value="0">${Deb_MuxOp*0}</option>
+							<option ${Deb_MuxSel*1} value="1">${Deb_MuxOp*1}</option>
+							<option ${Deb_MuxSel*2} value="2">${Deb_MuxOp*2}</option>
+						</select></td>
+			        <td>
+						<input type="submit" value="Select" name="Deb_Set_Mux"></td>
+				</form></tr>
+				<tr><form method=post>
+				    <td>On Edge Toggle</td>
+			        <td>${Deb_Toggle}</td>
+			        <td>
+			        	<input type="submit" value="Capture" name="Deb_Set_Toggle"></td>
+			    </form></tr>
+			</table>
+		</td>
+		<td style="border-style:none; height:100%;">
+			<table style="height:100%;">
+			<col style="width:18%"><col style="width:18%"><col style="width:14%">
+				<tr>
+					<th>Parameter</th>
+					<th>Value</th>
+					<th>Operation</th>
+				</tr>
+				<tr><form method=post>
+		  		    <td>Reg #&nbsp;
+		  		    	<input name="Deb_WriteReg" size="4" value="${Deb_WReq}"></td>
+				    <td>
+				    	<input name="Deb_WriteVal" size="4" value="${Deb_WVal}"></td>
+				    <td>
+						<input type="submit" value="Write Reg. " name="Deb_Write_Reg"></td>
+				</form></tr>
+				<tr><form method=post>
+				    <td>Toggle BT</td>
+					<td>${Deb_Dir}</td>
+			        <td>
+						<input type="submit" value="Capture" name="Deb_Set_Dir_Toggle"></td>
+				</form></tr>
+				<tr><form method=post>
+				    <td>Packet Size</td>
+			        <td>
+			        	<input name="Deb_Size" size="3" value="${Deb_Size}"></td>
+		            <td>
+						<input type="submit" value="Set Size" name="Deb_Set_Size"></td>
+				</form></tr>
+				<tr><form method=post>
+				    <td>GDLS Telemetry Loopback</td>
+			      <td>
+      				<input type="radio" value="D" ${Deb_GDLS_Telemetry_LB*D} name="Deb_GDLS_Telemetry_LB" id="dis"><label for="dis">Disable</label>&nbsp;&nbsp;
+           		<input type="radio" value="E" ${Deb_GDLS_Telemetry_LB*E} name="Deb_GDLS_Telemetry_LB" id="ena"><label for="ena">Enable</label>
+						</td>
+			      <td><input type="submit" value="Apply" name="Deb_Apply_GDLS_Telemetry_LB"></td>
+				</form></tr>
+				
+			<tr><form method=post>
+			<td>Config File</td>
+			<td>&nbsp;
+		    <select size="1" name="ld_cnf_file">
+					<option ${Cnf_file_Sel*1} value="1">${Cnf_file*1}</option>
+					<option ${Cnf_file_Sel*2} value="2">${Cnf_file*2}</option>
+					<option ${Cnf_file_Sel*3} value="3">${Cnf_file*3}</option>
+					<option ${Cnf_file_Sel*4} value="4">${Cnf_file*4}</option>
+					<option ${Cnf_file_Sel*5} value="5">${Cnf_file*5}</option>
+			</select></td>
+			<td><input type="submit" value="Execute" name="Set_cnf_file"></td>
+		    </form></tr>
+				
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

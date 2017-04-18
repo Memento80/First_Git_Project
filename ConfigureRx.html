@@ -1,0 +1,277 @@
+<html>
+<head>
+<title>Configure Rx</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+
+<h1>Config Rx</h1>
+<table style="background-color:white; border-style:none; padding-top:0;">
+<col style="width:50%"><col style="width:50%">
+<tr style="border-style:none;">
+<td style="border-style:none; height:100%;">
+	<table style="height:100%;">
+	<col style="width:40%"><col style="width:33%"><col style="width:27%">
+		<tr>
+			<th>Required Rx Configuration</th>
+			<th>Required Data</th>
+			<th>Set Rx</th>
+		</tr>
+		<tr><form method="POST">
+			<td>Rx Frequency Channel<br><font size="2">
+				<input type="radio" value="0" ${Rx_Table*0} name="Rx_Table" >Auto&nbsp;&nbsp;
+				<input type="radio" value="1" ${Rx_Table*1} name="Rx_Table" >Down&nbsp;&nbsp;
+				<input type="radio" value="2" ${Rx_Table*2} name="Rx_Table" >Up </td>
+				</font>
+			<td>
+				&nbsp; <input type="text" value="${Rx_Freq_Index}" name="Rx_Freq_Index" size="3"></td>
+			<td>
+				<input type="submit" value="Set" name="Set_Rx_Channel"></td>
+		</form></tr>
+		<tr><form method=post>
+			<td>Mode<br>
+			Symbol rate<br>
+			Rx Moo Fallback<br>
+			Rx Moo Track Wait</td>
+			<td>
+				&nbsp;<select size="1" name="Con_Rx_Moo">
+						<option ${Con_RxMoo_Sel*1} value="1">${Con_Moo*1}</option>
+						<option ${Con_RxMoo_Sel*2} value="2">${Con_Moo*2}</option>
+						<option ${Con_RxMoo_Sel*3} value="3">${Con_Moo*3}</option>
+						<option ${Con_RxMoo_Sel*4} value="4">${Con_Moo*4}</option>
+						<option ${Con_RxMoo_Sel*5} value="5">${Con_Moo*5}</option>
+						<option ${Con_RxMoo_Sel*7} value="7">${Con_Moo*7}</option>
+						<option ${Con_RxMoo_Sel*8} value="8">${Con_Moo*8}</option>
+						<option ${Con_RxMoo_Sel*9} value="9">${Con_Moo*9}</option>
+						<option ${Con_RxMoo_Sel*10} value="10">${Con_Moo*10}</option>
+						<option ${Con_RxMoo_Sel*15} value="15">${Con_Moo*15}</option>
+						<option ${Con_RxMoo_Sel*255} value="255">${Con_Moo*255}</option>
+					</select>
+					<br>&nbsp;${Con_RxSymbol} Msym/s<br>
+						<input type="radio" value="1" name="Con_Rx_Moo_F" ${Con_Rx_Moo_F*1} >On&nbsp;
+						<input type="radio" value="0" name="Con_Rx_Moo_F" ${Con_Rx_Moo_F*0} >Off<br>
+						<input type="radio" value="1" name="Con_Rx_Moo_W" ${Con_Rx_Moo_W*1} >On&nbsp;
+						<input type="radio" value="0" name="Con_Rx_Moo_W" ${Con_Rx_Moo_W*0} >Off</td>
+			<td>
+				<input type="submit" value="Select" name="Set_Rx_Moo"></td>
+		</form></tr>
+		<tr><form method=post>
+			<td>Rx DS Enable</td>
+			<td>
+			    <input type="radio" value="1" name="Con_Rx_DS" ${Con_Rx_DS*1} >Enable&nbsp;&nbsp;
+				<input type="radio" value="0" name="Con_Rx_DS" ${Con_Rx_DS*0} >Disable</td>
+			<td><input type="submit" value="Select" name="Set_Rx_DS"></td>
+		</tr>
+		<tr><form method=post>
+			<td>Modulation</td>
+			<td>&nbsp;
+		    <select size="1" name="Con_Rx_Mod">
+					<option ${Con_RxMod_Sel*1} value="1">${Con_RxModOp*1}</option>
+					<option ${Con_RxMod_Sel*2} value="2">${Con_RxModOp*2}</option>
+					<option ${Con_RxMod_Sel*3} value="3">${Con_RxModOp*3}</option>
+					<option ${Con_RxMod_Sel*6} value="6">${Con_RxModOp*6}</option>
+			</select></td>
+			<td><input type="submit" value="Select" name="Set_Rx_Mod"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>Dec. rate<br>Coded size</td>
+	    	<td>&nbsp;
+	        	<select size="1" name="Con_Decoder_rate">
+					<option ${Con_Dec_R_Sel*0} value="0">${Con_Dec_R_Op*0}</option>
+					<option ${Con_Dec_R_Sel*1} value="1">${Con_Dec_R_Op*1}</option>
+					<option ${Con_Dec_R_Sel*2} value="2">${Con_Dec_R_Op*2}</option>
+					<option ${Con_Dec_R_Sel*3} value="3">${Con_Dec_R_Op*3}</option>
+					<option ${Con_Dec_R_Sel*4} value="4">${Con_Dec_R_Op*4}</option>
+					<option ${Con_Dec_R_Sel*5} value="5">${Con_Dec_R_Op*5}</option>
+					<option ${Con_Dec_R_Sel*6} value="6">${Con_Dec_R_Op*6}</option>
+					<option ${Con_Dec_R_Sel*7} value="7">${Con_Dec_R_Op*7}</option>
+					<option ${Con_Dec_R_Sel*8} value="8">${Con_Dec_R_Op*8}</option>
+					<option ${Con_Dec_R_Sel*9} value="9">${Con_Dec_R_Op*9}</option>
+					<option ${Con_Dec_R_Sel*10} value="10">${Con_Dec_R_Op*10}</option>
+				</select>
+				<br>&nbsp;
+				<select size="1" name="Con_Decoder_Size">
+					<option ${Con_Dec_S_Sel*0} value="0">${Con_Dec_S_Op*0}</option>
+					<option ${Con_Dec_S_Sel*1} value="1">${Con_Dec_S_Op*1}</option>
+				</select>
+			</td>
+	    	<td><input type="submit" value="Decoder" name="Set_Decoder"></td>
+	    </form></tr>
+		<tr><form method=post>
+			<td>Rx PRBS</td>
+			<td>
+				<input type="radio" value="1" name="Con_Rx_Debug*1" ${Con_Rx_Debug*1_1}>On&nbsp;
+				<input type="radio" value="0" name="Con_Rx_Debug*1" ${Con_Rx_Debug*1_0}>Off
+			</td>
+			<td><input type="submit" value="Debug" name="Set_Rx_Debug_State" style="margin-left: 0; margin-right: 0"></td>
+		</form></tr>
+		<tr><form method=post>
+			<td>Decoder FEC</td>
+			<td>
+				<input type="radio" value="1" name="Con_Rx_Debug*2" ${Con_Rx_Debug*2_1} >On&nbsp;
+				<input type="radio" value="0" name="Con_Rx_Debug*2" ${Con_Rx_Debug*2_0} >Off
+			</td>
+			<td><input type="submit" value="Debug" name="Set_Rx_Debug_State" style="margin-left: 0; margin-right: 0"></td>
+		</form></tr>
+		<tr><form method=post>
+			<td>Scrambler Dis.</td>
+			<td>
+				<input type="radio" value="1" name="Con_Rx_Debug*3" ${Con_Rx_Debug*3_1} >On&nbsp;
+				<input type="radio" value="0" name="Con_Rx_Debug*3" ${Con_Rx_Debug*3_0} >Off
+			</td>
+			<td><input type="submit" value="Debug" name="Set_Rx_Debug_State" style="margin-left: 0; margin-right: 0"></td>
+		</form></tr>
+		<tr><form method=post>
+			<td>Spect. Inv.</td>
+			<td>
+				<input type="radio" value="1" name="Con_Rx_Debug*5" ${Con_Rx_Debug*5_1} >On&nbsp;
+				<input type="radio" value="0" name="Con_Rx_Debug*5" ${Con_Rx_Debug*5_0} >Off
+			</td>
+			<td><input type="submit" value="Debug" name="Set_Rx_Debug_State" style="margin-left: 0; margin-right: 0"></td>
+		</form></tr>
+		<tr><form method=post>
+			<td>SCC</td>
+			<td>
+				<input type="radio" value="1" name="Con_Rx_Debug*14" ${Con_Rx_Debug*14_1} >Int.
+				<input type="radio" value="0" name="Con_Rx_Debug*14" ${Con_Rx_Debug*14_0} >Ext.
+			</td>
+			<td><input type="submit" value="Debug" name="Set_Rx_Debug_State" style="margin-left: 0; margin-right: 0"></td>
+		</form></tr>
+		<tr><form method=post>
+			<td>Cor. Threshold</td>
+	    	<td>&nbsp; <input name="Con_RxCorTh" size="4" value="${Con_RxCorTh}"></td>
+	    	<td><input type="submit" value="Threshold" name="Set_Rx_Th"></td>
+		</form></tr>
+		</table>
+</td>
+<td  style="border-style:none; height:100%;">
+	<table style="height:100%;">
+	<col style="width:40%"><col style="width:30%"><col style="width:30%">
+		<tr>
+			<th>Required Rx Configuration</th>
+			<th>Required Data</th>
+			<th>Set Rx</th>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+	        <td><font size="2">&nbsp;Off loop / On loop</font></td>
+	        <td>&nbsp;</td>
+		</tr>
+		<tr><form method="POST">
+			<td>AGC MF</td>
+	        <td>&nbsp;&nbsp;
+	            <input type="radio" value="1" name="Con_RxLoop*12" ${Con_RxLoop*12_1}  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="0" name="Con_RxLoop*12" ${Con_RxLoop*12_0} >
+			</td>
+			<td><input type="submit" value="Loop Enable" name="Set_RxLoop"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>AGC VGA RF</td>
+	        <td>&nbsp;&nbsp;
+	            <input type="radio" value="1" name="Con_RxLoop*0" ${Con_RxLoop*0_1}  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="0" name="Con_RxLoop*0" ${Con_RxLoop*0_0} >
+			</td>
+	        <td><input type="submit" value="Loop Enable" name="Set_RxLoop"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>Coarse freq.</td>
+	        <td>&nbsp;&nbsp;
+	            <input type="radio" value="1" name="Con_RxLoop*1" ${Con_RxLoop*1_1}  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="0" name="Con_RxLoop*1" ${Con_RxLoop*1_0} >
+			</td>
+	        <td><input type="submit" value="Loop Enable" name="Set_RxLoop"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>Timing recovery</td>
+			<td>&nbsp;&nbsp;
+				<input type="radio" value="1" name="Con_RxLoop*2" ${Con_RxLoop*2_1}  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="0" name="Con_RxLoop*2" ${Con_RxLoop*2_0} >
+			</td>
+			<td><input type="submit" value="Loop Enable" name="Set_RxLoop"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>Carrier recovery</td>
+	        <td>&nbsp;&nbsp;
+	            <input type="radio" value="1" name="Con_RxLoop*3" ${Con_RxLoop*3_1}  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="0" name="Con_RxLoop*3" ${Con_RxLoop*3_0} >
+			</td>
+	        <td><input type="submit" value="Loop Enable" name="Set_RxLoop"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>DC Offset</td>
+	        <td>&nbsp;&nbsp;
+				<input type="radio" value="1" name="Con_RxLoop*4" ${Con_RxLoop*4_1}  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="0" name="Con_RxLoop*4" ${Con_RxLoop*4_0} >
+			</td>
+	        <td><input type="submit" value="Loop Enable" name="Set_RxLoop"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>LO DC Offset</td>
+	        <td>&nbsp;&nbsp;
+				<input type="radio" value="1" name="Con_RxLoop*5" ${Con_RxLoop*5_1}  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="0" name="Con_RxLoop*5" ${Con_RxLoop*5_0} >
+			</td>
+	        <td><input type="submit" value="Loop Enable" name="Set_RxLoop"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>Tx Amp. Imb.</td>
+	        <td>&nbsp;&nbsp;
+				<input type="radio" value="1" name="Con_RxLoop*10" ${Con_RxLoop*10_1}  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="0" name="Con_RxLoop*10" ${Con_RxLoop*10_0} >
+			</td>
+	        <td><input type="submit" value="Loop Enable" name="Set_RxLoop"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>Rx Amp. Imb.</td>
+	        <td>&nbsp;&nbsp;
+	        	<input type="radio" value="1" name="Con_RxLoop*9" ${Con_RxLoop*9_1}  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="0" name="Con_RxLoop*9" ${Con_RxLoop*9_0} >
+			</td>
+	        <td><input type="submit" value="Loop Enable" name="Set_RxLoop"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>Saturation</td>
+	        <td>&nbsp;&nbsp;
+	        	<input type="radio" value="1" name="Con_RxLoop*7" ${Con_RxLoop*7_1}  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="0" name="Con_RxLoop*7" ${Con_RxLoop*7_0} >
+			</td>
+	        <td><input type="submit" value="Loop Enable" name="Set_RxLoop"></td>
+		</form></tr>
+		<tr><form method="POST">
+	    	<td>AGC MF<font size="1"> (Set in Off Loop only)</font></td>
+	        <td>&nbsp;<input name="Con_AGC*0" size="4" value="${Con_AGC*0}"></td>
+	        <td><input type="submit" value="Set AGC MF" name="Set_AGC*0"></td>
+		</form></tr>
+		<tr><form method="POST">
+	    	<td>AGC VGA RF<font size="1"> (Set in Off Loop only)</font></td>
+	        <td>&nbsp;<input name="Con_AGC*1" size="4" value="${Con_AGC*1}"></td>
+	        <td><input type="submit" value="Set AGC IF" name="Set_AGC*1"></td>
+		</form></tr>
+		<tr>
+	    </form></tr>
+	 	<tr><form method=post>
+		<td>TCXO</td>
+		<td><input type="text" value="${TCXO}" name="TCXO" size="6" /></td>
+		<td><input type="submit" value="Set" name="Set_TCXO"></td>
+		</tr>
+		<tr>
+	 	<tr><form method=post>
+		<td>Band</td>
+		<td>
+			<input type="radio" value="1" name="set_band" ${set_band*1}>High&nbsp;
+			<input type="radio" value="0" name="set_band" ${set_band*0}>Low</td>
+		<td>
+			<input type="submit" value="Set" name="Set_set_band"></td>
+	    </form></tr>
+	    		<tr><form method=post>
+		<td>Frequency Channel Rx</td>
+		<td><input type="text" value="${set_freq_ch*0}" name="set_freq_ch*0" size="6">&nbsp;<font size="2">1- 1000</font></td>
+		<td><input type="submit" value="Set" name="Set_set_freq_ch"></td>
+	</form></tr>
+		</tr>
+	</table>
+</td></tr>
+</table>
+</body>
+</html>

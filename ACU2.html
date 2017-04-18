@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>ACU</title>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+
+<h1>ACU - Control</h1>
+		<div align="center">
+<table border="1" width="60%" bgcolor="#EFEFEF">
+			<tr>
+				<th width="45%" align="left">
+				<p>
+<font size="4" color="#007EA8">Parameter&nbsp;</td></font>
+				<th width="30%" align="left">
+				<p>
+<font size="4" color="#007EA8">Value</font><th width="25%" align="left">
+				<p style="margin-left: 2px" align:"center"><font size="4" color="#007EA8">Operation&nbsp;</td></font>
+			<tr><form method=post>
+				<td width="45%" align="left">
+				<p>
+Motor Start</td>
+				<td width="30%" align="left">
+				&nbsp;</td>
+				<td width="25%" align="left"><p align="center">
+					<input type="submit" value="Start" name="ACU_Start">
+				</td>
+			</form></tr>
+			<tr><form method=post>
+				<td width="45%" align="left">
+				<p>
+Motor Stop</td>
+				<td width="30%" align="left">
+				&nbsp;</td>
+				<td width="25%" align="left"><p align="center">
+					<input type="submit" value="Stop" name="ACU_Stop">
+				</td>
+			</form></tr>
+			<tr><form method=post>
+				<td width="45%" align="left">
+				<p>
+Heading <font size="2">(-8192 - 8191)</font></td>
+				<td width="30%" align="left">
+				<p>
+&nbsp;<input size=5 name="ACU_Set_Head" value=${ACU_Head}></td>
+				<td width="25%" align="left">
+				<p align="center">
+					<input type="submit" value="Set" name="ACU_Set"></td>
+			</form></tr>
+			<tr><form method=post>
+				<td width="45%" align="left">
+				<p>
+Inquire Heading</td>
+				<td width="30%" align="left">
+				<p>
+&nbsp;</td>
+				<td width="25%" align="left">
+				<p align="center">
+					<input type="submit" value="Get" name="ACU_Get"></td>
+			</form></tr>
+			<tr><form method=post>
+				<td width="45%" align="left">
+				<p>
+Calibrate </td>
+				<td width="30%" align="left">
+				<p>
+<font size="2">&nbsp;PX=0;</font></td>
+				<td width="25%" align="left">
+				<p align="center">
+					<input type="submit" value="Calibrate" name="ACU_Calibrate"></td>
+			</form></tr>
+			<tr><form method=post>
+				<td width="45%" align="left">
+				<p>
+IBIT</td>
+				<td width="30%" align="left">
+				<p>
+&nbsp;</td>
+				<td width="25%" align="left">
+				<p align="center">
+					<input type="submit" value="IBIT" name="ACU_IBIT"></td>
+			</form></tr>
+		</table></div>
+		</body>
+</html>

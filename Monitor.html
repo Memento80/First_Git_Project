@@ -1,0 +1,190 @@
+<html>
+<head>
+<title>Monitor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*1}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body><h1>Monitor (Local: ${Ver_xDLS} Remote: ${RVer_xDLS})</h1>
+<table style="background-color:white; border-style:none;width:96%">
+<col style="width:48%"><col style="width:48%">
+	<tr style="border-style:none;">
+		<td style="border-style:none; height:100%;">
+			<table style="height:100%;">
+			<col style="width:24%"><col style="width:13%"><col style="width:13%;background-color:#ddffff">
+				<tr>
+					<th>Parameter Name</th>
+					<th>Local</th>
+					<th>Remote</th>
+				</tr>
+				<tr>
+					<td>Acquisition state</td>
+					<td>${Mon_acq_state}</td>
+					<td>${RMon_acq_state}</td>
+				</tr>
+				<tr>
+					<td>SNR (dB)</td>
+					<td>${Mon_evm}</td>
+					<td>${RMon_evm}</td>
+				</tr>
+				<tr>
+					<td>RSL (dBm)</td>
+					<td>${Mon_RSL}</td>
+					<td>${RMon_RSL}</td>
+				</tr>
+				<tr>
+					<td>Pilot Lock Ind</td>
+					<td>${Mon_Pilot}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Phase Ambiguity</td>
+					<td>${Mon_Phase_Amb}</td>
+					<td>${RMon_Phase_Amb}</td>
+				</tr>
+				<tr>
+					<td>Coarse freq. (KHz)</td>
+					<td>${Mon_coarse_freq}</td>
+					<td>${RMon_coarse_freq}</td>
+				</tr>
+				<tr>
+					<td>Fine freq. (KHz)</td>
+					<td>${Mon_cr_freq}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Correlator </td>
+					<td>${Mon_cor_center}</td>
+					<td>${RMon_cor_center}</td>
+				</tr>
+				<tr>
+					<td>Timing freq. (ppm)</td>
+					<td>${Mon_timing_freq}</td>
+					<td>${RMon_timing_freq}</td>
+				</tr>
+				<tr>
+					<td>Early Late Det.</td>
+					<td>${Mon_early_late}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>ADC Det. </td>
+					<td>${Mon_adc_det}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>SRRC Det.</td>
+					<td>${Mon_rssi_mf}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>SRRC Gain</td>
+					<td>${Con_AGC*0}</td>
+					<td>${RCon_AGC*0}</td>
+				</tr>
+				<tr>
+					<td>IF Atten. (dB)</td>
+					<td>${Con_AGC*1}</td>
+					<td>${RCon_AGC*1}</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>                
+			</table>
+		</td>
+		<td style="border-style:none; height:100%;">
+			<table style="height:100%;">
+			<col style="width:24%"><col style="width:13%"><col style="width:13%;background-color:#ddffff">
+				<tr>
+					<th>Parameter Name</th>
+					<th>Local</th>
+					<th>Remote</th>
+				</tr>
+				<tr>
+					<td>AM Azimuth</td>
+					<td>${Mon_Am_Az}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>AM Elevation</td>
+					<td>${Mon_Am_El}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>SCC Gain</td>
+					<td>${Mon_SCC_AGC}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>I DC Offset</td>
+					<td>${Mon_DC*0}</td>
+					<td>${RMon_DC*0}</td>
+				</tr>
+				<tr>
+					<td>Q DC Offset</td>
+					<td>${Mon_DC*1}</td>
+					<td>${RMon_DC*1}</td>
+				</tr>
+				<tr>
+					<td>I LO DC Offset</td>
+					<td>${Mon_DC*2}</td>
+					<td>${RMon_DC*2}</td>
+				</tr>
+				<tr>
+					<td>Q LO DC Offset</td>
+					<td>${Mon_DC*3}</td>
+					<td>${RMon_DC*3}</td>
+				</tr>
+				<tr>
+					<td>Rx IQ Amp. Imb.</td>
+					<td>${Mon_iq_gain}</td>
+					<td>${RMon_iq_gain}</td>
+				</tr>
+				<tr>
+					<td>Tx IQ Amp. Imb.</td>
+					<td>${Mon_iq_phase}</td>
+					<td>${RMon_iq_phase}</td>
+				</tr>
+				<tr>
+					<td>APC Det. Diff.</td>
+					<td>${Mon_APC_diff}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Link Margin (dB)</td>
+					<td>${Mon_Link_Margin}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Rx Phase Imbalance [deg.]</td>
+					<td>${RxPhaseImbalance}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Tx Phase Imbalance [deg.]</td>
+					<td>${TxPhaseImbalance}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Register	${Deb_RReq*0}</td>
+					<td>${Deb_RVal*0}</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Register	${Deb_RReq*1}</td>
+					<td>${Deb_RVal*1}</td>
+					<td>NA</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>RF</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>RF - Control</h1>
+	<table >
+	<col style="width:35%"><col style="width:45%"><col style="width:20%">
+		<tr>
+			<th>Parameter</th>
+			<th>Value</th>
+			<th>Action</th>
+		</tr>
+		<tr><form method=post>
+			<td>Tx Power</td>
+			<td>
+				<input type="radio" value="1" ${Tx_Power*1} name="Tx_Power">Low&nbsp;&nbsp;
+         		<input type="radio" value="0" ${Tx_Power*0} name="Tx_Power" >Off&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="2" ${Tx_Power*2} name="Tx_Power" >High</td>
+			<td>
+				<input type="submit" value="Set" name="Set_Tx_Power"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>Tx Attenuation</td>
+			<td>
+				&nbsp;<input type="text" value="${TRCV_DCA}" name="TRCV_DCA" size="7">&nbsp;<font size="2">0
+				- 31.5</font></td>
+			<td>
+				<input type="submit" value="Set DCA" name="TRCV_Set_DCA"></td>
+		</form></tr>
+	</table>
+</body>
+</html>

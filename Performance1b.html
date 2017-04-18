@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Performance</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*3}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+	<table>
+	<col style="width:20%"><col style="width:20%"><col style="width:30%"><col style="width:30%">
+		<tr>
+			<th>Local Name</th>
+			<th>Total Errors</th>
+			<th>Average in Tracking</th>
+			<th>Average in Window</th>
+		</tr>
+		<tr>
+			<td>Pilot</td>
+			<td>${Per_err_total*1}</td>
+			<td>${Per_err_trk*1}</td>
+			<td>${Per_err_window*1}</td>
+		</tr>
+		<tr>
+			<td>Coded</td>
+			<td>${Per_err_total*0}</td>
+			<td>${Per_err_trk*0}</td>
+			<td>${Per_err_window*0}</td>
+		</tr>
+		<tr>
+			<td>FEC Packet</td>
+			<td>${Per_err_total*2}</td>
+			<td>${Per_err_trk*2}</td>
+			<td>${Per_err_window*2}</td>
+		</tr>
+		<tr>
+			<td>CRC</td>
+			<td>${Per_err_total*3}</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Missed Imagery Frames</td>
+			<td>${Per_Missed}</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>
+	</table>
+	<br>
+	<table style="background-color:#ddffff">
+	<col style="width:20%"><col style="width:20%"><col style="width:30%"><col style="width:30%">
+		<tr>
+			<th>Remote Name</th>
+			<th>Total Errors</th>
+			<th>Average in Tracking</th>
+			<th>Average in Window</th>
+		</tr>
+		<tr>
+			<td>Pilot</td>
+			<td>${RPer_err_total*1}</td>
+			<td>${RPer_err_trk*1}</td>
+			<td>${RPer_err_window*1}</td>
+		</tr>
+		<tr>
+			<td>Coded</td>
+			<td>${RPer_err_total*0}</td>
+			<td>${RPer_err_trk*0}</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>FEC Packet</td>
+			<td>${RPer_err_total*2}</td>
+			<td>${RPer_err_trk*2}</td>
+			<td>${RPer_err_window*2}</td>
+		</tr>
+		<tr>
+			<td>CRC</td>
+			<td>${RPer_err_total*3}</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>
+	</table>
+</body>
+</html>

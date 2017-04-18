@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>IPU Registers</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*1}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>IPU - Monitor <font size=3>(<a target=_top href="FramesetStatIPU.html">Goto IPU Statistics</a>)</font></h1>
+<table>
+	<col style="width:28%">
+	<col style="width:18%">
+	<col style="width:20%">
+	<col style="width:18%;background-color:#ddffff">
+	<col style="width:20%;background-color:#ddffff">
+	<tr>
+		<th>Counter</th>
+		<th>Local DL</th>
+		<th>Local SSR</th>
+		<th>Remote DL</th>
+		<th>Remote SSR</th>
+	</tr>
+	<tr>
+		<td>Total Frames </td>
+		<td>${IPU_DL_Count}</td>
+		<td>${IPU_SSR_Count}</td>
+		<td>NA</td>
+		<td>NA</td>
+	</tr>
+	<tr>
+		<td>Missed Frames</td>
+		<td>${IPU_Miss_DL}</td>
+		<td>${IPU_Miss_SSR}</td>
+		<td>${RIPU_Miss_DL}</td>
+		<td>${RIPU_Miss_SSR}</td>
+	</tr>
+	<tr>
+		<td>Nonconsecutive Counter</td>
+		<td>${IPU_Err*0}</td>
+		<td>${IPU_Err*1}</td>
+		<td>${RIPU_Err*0}</td>
+		<td>${RIPU_Err*1}</td>
+	</tr>
+</table>
+<br>
+<table style="background-color:white; border-style:none;width:100%">
+<col style="width:50%"><col style="width:50%">
+	<tr style="border-style:none;">
+		<td style="border-style:none; height:100%;">
+			<table style="height:100%;">
+
+<col style="width:54%"><col style="width:23%"><col style="width:23%;background-color:#ddffff">
+	<tr>
+		<th>Parameter</th>
+		<th>Local</th>
+		<th>Remote</th>
+	</tr>
+	<tr>
+		<td>Frames/sec.</td>
+		<td>${IPU_Rate*0}</td>
+		<td>${RIPU_Rate*0}</td>
+	</tr>
+	<tr>
+		<td>Mbits/sec.</td>
+		<td>${IPU_Rate*1}</td>
+		<td>${RIPU_Rate*1}</td>
+	</tr>
+	<tr>
+		<td>FIFO usage (KB)</td>
+		<td>${IPU_Buf}</td>
+		<td>${RIPU_Buf}</td>
+	</tr>
+	<tr>
+		<td>HW FIFO usage (KB)</td>
+		<td>${IPU_HWBuf}</td>
+		<td>${RIPU_HWBuf}</td>
+	</tr>
+	<tr>
+		<td>FIFO size (KB)</td>
+		<td>${IPU_BufSize}</td>
+		<td>${RIPU_BufSize}</td>
+	</tr>
+</table>
+</td>
+		<td style="border-style:none; height:100%;">
+			<table style="height:100%;">
+
+<col style="width:54%"><col style="width:23%"><col style="width:23%;background-color:#ddffff">
+	<tr>
+		<th>Faults</th>
+		<th>Local</th>
+		<th>Remote</th>
+	</tr>
+	<tr>
+		<td>Checksum error</td>
+		<td>${IPU_Err*2}</td>
+		<td>${RIPU_Err*2}</td>
+	</tr>
+	<tr>
+		<td>Checksum fault counter</td>
+		<td>${IPU_CS_Fault}</td>
+		<td>${RIPU_CS_Fault}</td>
+	</tr>
+	<tr>
+		<td>Stop HD not received</td>
+		<td>${IPU_Err*3}</td>
+		<td>${RIPU_Err*3}</td>
+	</tr>
+	<tr>
+		<td>Start HD not received</td>
+		<td>${IPU_Err*4}</td>
+		<td>${RIPU_Err*4}</td>
+	</tr>
+	<tr>
+		<td>Start HD fault counter</td>
+		<td>${IPU_HD_Fault}</td>
+		<td>${RIPU_HD_Fault}</td>
+	</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+

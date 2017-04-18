@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Performance</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*3}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+	<h1>Performance</h1>
+	<table>
+	<col style="width:44%"><col style="width:28%"><col style="width:28%;background-color:#ddffff"">
+		<tr>
+			<th>Name</th>
+			<th>Local</th>
+			<th>Remote</th>
+		</tr>
+		<tr>
+			<td>SNR (dB)</td>
+			<td>${Mon_evm}</td>
+			<td>${RMon_evm}</td>
+		</tr>
+		<tr>
+			<td>RSL (dBm)</td>
+			<td>${Mon_RSL}</td>
+			<td>${RMon_RSL}</td>
+		</tr>
+		<tr>
+			<td>Elapsed Time from Reset (sec.)</td>
+			<td>${Per_elps_reset}</td>
+			<td>${RPer_elps_reset}</td>
+		</tr>
+		<tr>
+			<td>Elapsed Time in Tracking (sec.)</td>
+			<td>${Per_elps_trk}</td>
+			<td>${RPer_elps_trk}</td>
+		</tr>
+		<tr>
+			<td>ReAcquisition Counter</td>
+			<td>${Per_ReAcq}</td>
+			<td>${RPer_ReAcq}</td>
+		</tr>
+	</table>
+	<br>
+</body>
+</html>

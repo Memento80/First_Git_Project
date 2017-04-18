@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>BIT</title>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>BIT - Control</h1>
+	<table>
+	<col style="width:23%;"><col style="width:65%;"><col style="width:12%;">
+		<tr>
+			<th>Parameter</th>
+			<th>Value</th>
+			<th>Action&nbsp;</th>
+		</tr>
+		<tr><form method=post>
+			<td>Digital Loopback</td>
+			<td>
+			    <input type="radio" value="0" name="Con_Rx_Debug*4" ${Con_Rx_Debug*4_0} >No Loop&nbsp;&nbsp;
+			    <input type="radio" value="1" name="Con_Rx_Debug*4" ${Con_Rx_Debug*4_1} >Loopback
+			</td>
+			<td>
+				<input type="submit" value="Set" name="SetBIT_Digital_Loopback"></td>
+			</form></tr>
+			<tr><form method=post>
+				<td>RF Loopback</td>
+				<td>
+					<input type="radio" value="0" ${BIT_RF_Loop*0} name="BIT_RF_Loop">No Loop&nbsp;&nbsp;
+					<input type="radio" value="1" ${BIT_RF_Loop*1} name="BIT_RF_Loop">Loopback&nbsp;&nbsp;
+				<td>
+					<input type="submit" value="Set" name="BIT_RF_Loopback"></td>
+			</form></tr>
+			<tr><form method=post>
+				<td>
+					Antenna Loopback</td>
+				<td>
+					<input type="radio" value="0" ${BIT_Ant_Loop*0} name="BIT_Ant_Loop">No Loop&nbsp;&nbsp;
+					<input type="radio" value="1" ${BIT_Ant_Loop*1} name="BIT_Ant_Loop">Loopback&nbsp; &nbsp;
+					<input name=BIT_Ant_Freq* value=${BIT_Ant_Freq} size="4">MHz</td>
+				<td>
+					<input type="submit" value="Set" name="BIT_Ant_Loopback"></td>
+			</form></tr>
+			<tr><form method=post>
+				<td>
+					IBIT</td>
+				<td>
+					<input type="radio" value="0" ${BIT_IBIT*0} name="BIT_IBIT" >No IBIT &nbsp;
+					<input type="radio" value="1" ${BIT_IBIT*1} name="BIT_IBIT" >IBIT</td>
+				<td>
+					<input type="submit" value="Set" name="SetBIT_IBIT"></td>
+			</form></tr>
+		</table>
+    </body>
+</html>

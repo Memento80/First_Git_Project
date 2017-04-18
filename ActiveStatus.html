@@ -1,0 +1,260 @@
+﻿<html>
+<head>
+<title>Main Monitor</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*1}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>Main - Monitor (Local: ${Ver_xDLS}, Remote: ${RVer_xDLS})</h1>
+<table style="background-color:white; border-style:none; padding-top:0;">
+<col style="width:41%"><col style="width:59%">
+	<tr style="border-style:none;">
+		<td style="border-style:none; height:100%;">
+			<table style="height:100%;">
+			<col style="width:17%"><col style="width:12%"><col style="width:12%;background-color:#ddffff">
+			<tr>
+				<th>Status</th>
+				<th>Local</th>
+				<th>Remote</th>
+			</tr>
+			<tr>
+				<td>Master Comm.</td>
+				<td>${MasterComm}</td>
+				<td>${RMasterComm}</td>
+			</tr>
+			<tr>
+				<td>xDLS Health</td>
+				<td>${xDLSH}</td>
+				<td>${RxDLSH}</td>
+			</tr>
+			<tr>
+				<td>xTRU Health</td>
+				<td>${xTRUH}</td>
+				<td>${RxTRUH}</td>
+			</tr>
+			<tr>
+				<td>User Fault Warning</td>
+				<td>${UserFaultW}</td>
+				<td>NA</td>
+			</tr>
+			<tr>
+				<td>${Ver_xDLS} State</td>
+				<td>${xDLS_State}</td>
+				<td>${RxDLS_State}</td>
+			</tr>
+			<tr>
+				<td>Link Status</td>
+				<td>${LinkStatus}</td>
+				<td>${RLinkStatus}</td>
+			</tr>
+			<tr>
+				<td>LDPC</td>
+				<td>${LDPC}</td>
+				<td>${RLDPC}</td>
+			</tr>
+			<tr>
+				<td>RSL [dBm]</td>
+				<td>${Mon_RSL}</td>
+				<td>${RMon_RSL}</td>
+			</tr>
+			<tr>
+				<td>SNR [dB]</td>
+				<td>${Mon_evm}</td>
+				<td>${RMon_evm}</td>
+			</tr>
+			<tr>
+				<td>PER (in window)</td>
+				<td>${Per_err_window*2}</td>
+				<td>${RPer_err_window*2}</td>
+			</tr>
+			<tr>
+				<td>Range [m]</td>
+				<td>${Sp_Range}</td>
+				<td>NA</td>
+			</tr>
+			<tr>
+				<td width="29%">Board Slot</td>
+				<td width="34%">${BoardSlot}</td>
+				<td width="33%">NA</td>
+			</tr>
+
+			</table>
+		</td>
+		<td style="border-style:none; height:100%;">
+		    <table  style="height:100%;">
+		    <col style="width:22%"><col style="width:19%"><col style="width:19%;background-color:#ddffff">
+				<tr>
+					<th>Status</th>
+					<th>Local</th>
+					<th>Remote</th>
+				</tr>
+				<tr>
+					<td>Transmit_ARM</td>
+					<td>${Tx_Arm}</td>
+					<td>${RTx_Arm}</td>
+				</tr>
+				<tr>
+					<td>Tx Power</td>
+					<td>${Tx_Power_l}</td>
+					<td>${RTx_Power_l} </td>
+				</tr>
+				<tr>
+					<td>Tx Detector</td>
+					<td>${TRCV_Vdet}</td>
+					<td>${RTRCV_Vdet} </td>
+				</tr>
+				<tr>
+					<td>Tx Frequency Channel</td>
+					<td>${Tx_Freq_Index}</td>
+					<td>(Rx) ${RRx_Freq_Index} </td>
+				</tr>
+				<tr>
+					<td>Rx Frequency Channel</td>
+					<td>${Rx_Freq_Index}</td>
+					<td>(Tx) ${RTx_Freq_Index} </td>
+				</tr>
+				<tr>
+					<td>Tx Mode - Tx R Info </td>
+					<td>${Mon_MooTx} Mb/s</td>
+					<td>(Rx) ${RMon_MooRx}</td>
+				</tr>
+				<tr>
+					<td>Rx Mode - Rx R Info</td>
+					<td>${Mon_MooRx} Mb/s</td>
+					<td>(Tx) ${RMon_MooTx}</td>
+				</tr>
+				<tr>
+					<td>Tx DS</td>
+					<td>NA</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Rx DS</td>
+					<td>NA</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Antenna Select</td>
+					<td>${Sp_Antenna_Select}</td>
+					<td>NA</td>
+				</tr>
+                <tr>
+				    <td width="29%">Reserved</td>
+				    <td width="34%">NA</td>
+				    <td width="33%">NA</td>
+			    </tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table style="background-color:white; border-style:none; padding-top:0;">
+<col style="width:25%"><col style="width:75%">
+	<tr style="border-style:none;">
+		<td style="border-style:none; height:100%;">
+			<table>
+			<col style="width:40%;"><col style="width:60%;color:${GRAY_IN_ADLS};">
+				<tr>
+					<th>Pedestal<br>&nbsp;</th>
+					<th>&nbsp;</th>
+				</tr>
+				<tr>
+					<td>Status</td>
+					<td>${Sp_Pedestal_status}</td>
+				</tr>
+				<tr>
+					<td>Mode</td>
+					<td>${Sp_Pedestal_Mode}</td>
+				</tr>
+			</table>
+		</td>
+		<td style="border-style:none; height:100%;">
+			<table>
+			<col style="width:12%;"><col style="width:12%;color:${GRAY_IN_ADLS};">
+								    <col style="width:20%;color:${GRAY_IN_ADLS};">
+									<col style="width:20%;color:${GRAY_IN_ADLS};">
+									<col style="width:19%;color:${GRAY_IN_ADLS};">
+									<col style="width:19%;color:${GRAY_IN_ADLS};">
+									<col style="width:13%;color:${GRAY_IN_ADLS};">
+				<tr>
+					<th>&nbsp;</th>
+					<th>Position<br>&nbsp;</th>
+					<th>Search Center<br>&nbsp;</th>
+					<th>Search Sector<br>Narrow Beam</th>
+					<th>Search Sector<br>Wide Beam</th>
+					<th>Error<br>&nbsp;</th>
+				</tr>
+				<tr>
+					<td>Azimuth</td>
+					<td>${ACU_Read*7}</td>
+					<td>${ACU_Read*60}</td>
+					<td>${ACU_Read*34A}</td>
+					<td>${ACU_Read*34B}</td>
+					<td>${ACU_Read*5}</td>
+				</tr>
+				<tr>
+					<td>Elevation</td>
+					<td>${ACU_Read*8}</td>
+					<td>${ACU_Read*61}</td>
+					<td>${ACU_Read*350}</td>
+					<td>${ACU_Read*351}</td>
+					<td>${ACU_Read*6}</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table style="background-color:white; border-style:none;width:100%">
+	<tr style="border-style:none;">
+		<td style="border-style:none; height:100%;">
+			<table style="width:100%;">
+			<col style="width:20%;"><col style="width:20%;"><col style="width:20%;background-color:#ddffff">
+			<col style="width:20%;"><col style="width:20%;background-color:#ddffff">
+				<tr>
+					<th>Status</th>
+					<th>Local Tx</th>
+					<th>Remote Rx</th>
+					<th>Local Rx</th>
+					<th>Remote Tx</th>
+				</tr>
+				<tr>
+					<td>Imagery (LVDS)</td>
+					<td>${ImageryTx}</td>
+					<td>${RImageryRx}</td>
+					<td>${ImageryRx}</td>
+					<td>${RImageryTx}</td>
+				</tr>
+				<tr>
+					<td>Transparent Ethernet</td>
+					<td>${TransEthTx}</td>
+					<td>${RTransEthRx}</td>
+					<td>${TransEthRx}</td>
+					<td>${RTransEthTx}</td>
+				</tr>
+				<tr>
+					<td>Telemetry/Telecommand</td>
+					<td>${TelemetryTx}</td>
+					<td>${RTelemetryRx}</td>
+					<td>${TelemetryRx}</td>
+					<td>${RTelemetryTx}</td>
+				</tr>
+				<tr>
+					<td>Nav</td>
+					<td>${NavTx}</td>
+					<td>${RNavRx}</td>
+					<td>${NavRx}</td>
+					<td>${RNavTx}</td>
+				</tr>
+				<tr>
+					<td>DL Service</td>
+					<td>${DLServiceTx}</td>
+					<td>${RDLServiceRx}</td>
+					<td>${DLServiceRx}</td>
+					<td>${RDLServiceTx}</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</body>
+</html>
+

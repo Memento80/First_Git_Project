@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>RF</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*1}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+
+<h1>RF - Monitor <font size=3></font></h1>
+	<table style="background-color:white; border-style:none; padding-top:0;">
+	<col style="width:50%"><col style="width:50%">
+		<tr style="border-style:none;">
+			<td style="border-style:none; height:100%;">
+				<table style="height:100%;">
+				<col style="width:50%"><col style="width:50%">
+					<tr>
+						<th>Parameter</th>
+						<th>Value</th>
+					</tr>
+					<tr>
+						<td>PLL TX</td>
+						<td>${PLL_Locked*0}</td>
+					</tr>
+					<tr>
+						<td>PLL RX </td>
+						<td>${PLL_Locked*1}</td>
+					</tr>
+					<tr>
+						<td>PLL LB </td>
+						<td>${PLL_Locked*2}</td>
+					</tr>
+					<tr>
+						<td>PLL Clock Generator</td>
+						<td>${PLL_Locked*3}</td>
+					</tr>
+					<tr>
+						<td>APC Alarm</td>
+						<td>${APC_Alarm}</td>
+					</tr>
+					</table>
+			</td>
+			<td style="border-style:none; height:100%;">
+				<table style="height:100%;">
+				<col style="width:50%"><col style="width:50%">
+					<tr>
+						<th>Parameter</th>
+						<th>Value</th>
+					</tr>
+					<tr>
+						<td>FE Temperature</td>
+						<td>${BIT_FE_Temp}</td>
+					</tr>
+					<tr>
+						<td>FE Tx Power Detector</td>
+						<td>${TRCV_Vdet}</td>
+					</tr>
+					<tr>
+						<td>RSSI</td>
+						<td>${Mon_RSL}</td>
+					</tr>
+					<tr>
+						<td >FE Tx Fault</td>
+						<td >${FE_Tx_Fault}</td>
+					</tr>
+					<tr>
+						<td >&nbsp;</td>
+						<td >&nbsp;</td>
+					</tr>
+					</table>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

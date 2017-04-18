@@ -1,0 +1,203 @@
+<html>
+<head>
+<title>Configure Tx</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>Config Tx</h1>
+<table style="background-color:white; border-style:none; padding-top:0;">
+<col style="width:50%"><col style="width:50%">
+<tr style="border-style:none;">
+<td style="border-style:none; height:100%;">
+	<table style="height:100%;">
+	<col style="width:40%"><col style="width:40%"><col style="width:20%">
+	<tr>
+		<th>Required Tx Configuration</th>
+		<th>Required Data</th>
+		<th>Set Tx</th>
+	</tr>
+	<tr><form method="POST">
+		<td>Tx Power</td>
+		<td>
+      <input type="radio" value="1" ${Tx_Power*1} name="Tx_Power" >Low&nbsp;&nbsp;
+      <input type="radio" value="0" ${Tx_Power*0} name="Tx_Power" >Off&nbsp;&nbsp;
+			<input type="radio" value="2" ${Tx_Power*2} name="Tx_Power" >High</td>
+		<td>
+			<input type="submit" value="Set" name="Set_Tx_Power"></td>
+	</form></tr>
+	<tr><form method=post>
+		<td>Mode<br>
+		Tx Moo Fallback<br>
+		Tx Moo Slaved</td>
+		<td>
+	    	<select size="1" name="Con_Tx_Moo">
+				<option ${Con_TxMoo_Sel*1} value="1">${Con_Moo*1}</option>
+				<option ${Con_TxMoo_Sel*2} value="2">${Con_Moo*2}</option>
+				<option ${Con_TxMoo_Sel*3} value="3">${Con_Moo*3}</option>
+				<option ${Con_TxMoo_Sel*4} value="4">${Con_Moo*4}</option>
+				<option ${Con_TxMoo_Sel*5} value="5">${Con_Moo*5}</option>
+				<option ${Con_TxMoo_Sel*6} value="6">${Con_Moo*6}</option>
+				<option ${Con_TxMoo_Sel*7} value="7">${Con_Moo*7}</option>
+				<option ${Con_TxMoo_Sel*8} value="8">${Con_Moo*8}</option>
+				<option ${Con_TxMoo_Sel*9} value="9">${Con_Moo*9}</option>
+				<option ${Con_TxMoo_Sel*10} value="10">${Con_Moo*10}</option>
+				<option ${Con_TxMoo_Sel*11} value="11">${Con_Moo*11}</option>
+				<option ${Con_TxMoo_Sel*12} value="12">${Con_Moo*12}</option>
+				<option ${Con_TxMoo_Sel*13} value="13">${Con_Moo*13}</option>
+				<option ${Con_TxMoo_Sel*14} value="14">${Con_Moo*14}</option>
+				<option ${Con_TxMoo_Sel*15} value="15">${Con_Moo*15}</option>
+				<option ${Con_TxMoo_Sel*255} value="255">${Con_Moo*255}</option>
+			</select><br>
+				<input type="radio" value="1" name="Con_Tx_Moo_F" ${Con_Tx_Moo_F*1}>On&nbsp;
+				<input type="radio" value="0" name="Con_Tx_Moo_F" ${Con_Tx_Moo_F*0}>Off<br>
+				<input type="radio" value="1" name="Con_Tx_Moo_S" ${Con_Tx_Moo_S*1}>On&nbsp;
+				<input type="radio" value="0" name="Con_Tx_Moo_S" ${Con_Tx_Moo_S*0}>Off<br>
+				<input type="radio" value="1" name="Con_Tx_DS" ${Con_Tx_DS*1}>Enable&nbsp;
+				<input type="radio" value="0" name="Con_Tx_DS" ${Con_Tx_DS*0}>Disable
+		</td>
+	    <td><input type="submit" value="Select" name="Set_Tx_Moo"></td>
+    </form></tr>
+	<tr><form method=post>
+		<td>Auto Transmit</td>
+		<td>
+			<input type="radio" value="1" name="Con_Tx_Auto_Tx" ${Con_Tx_Auto_Tx*1}>On&nbsp;
+			<input type="radio" value="0" name="Con_Tx_Auto_Tx" ${Con_Tx_Auto_Tx*0}>Off</td>
+		<td>
+			<input type="submit" value="Set" name="Set_Con_Tx_Auto_Tx"></td>
+	</form></tr>
+	<tr><form method=post>
+		<td>APC Enable</td>
+		<td>
+			<input type="radio" value="1" name="Con_Tx_APC_En" ${Con_Tx_APC_En*1}>On&nbsp;
+			<input type="radio" value="0" name="Con_Tx_APC_En" ${Con_Tx_APC_En*0}>Off</td>
+		<td>
+			<input type="submit" value="Set" name="Set_Con_Tx_APC_En"></td>
+	</form></tr>
+	<tr><form method="POST">
+		<td>Tx Attenuation</td>
+		<td>
+			&nbsp;<input type="text" value="${TRCV_DCA}" name="TRCV_DCA" size="7">&nbsp;<font size="2">0 - 31.5</font></td>
+		<td>
+			<input type="submit" value="Set DCA" name="TRCV_Set_DCA"></td>
+	</form></tr>
+	<tr>
+		<td>Symbol rate</td>
+	    <td>${Con_TxSymbol} Msym/s</td>
+	    <td>&nbsp;</td>
+    </tr>
+</table>
+</td>
+<td style="border-style:none; height:100%;">
+	<table style="height:100%;">
+	<col style="width:17%"><col style="width:17%"><col style="width:16%">
+	<tr>
+		<th>Required Tx Configuration</th>
+		<th>Required Data</th>
+		<th>Set Tx</th>
+	</tr>
+	<tr><form method="POST">
+		<td>Tx PRBS</td>
+		<td>
+			<input type="radio" value="1" name="Con_Tx_Debug*1" ${Con_Tx_Debug*1_1}>On&nbsp;
+			<input type="radio" value="0" name="Con_Tx_Debug*1" ${Con_Tx_Debug*1_0}>Off</td>
+		<td>
+			<input type="submit" value="Debug State" name="Set_Tx_Debug_State"></td>
+	</form></tr>
+	<tr><form method="POST">
+		<td>Encoder FEC</td>
+		<td>
+			<input type="radio" value="1" name="Con_Tx_Debug*2" ${Con_Tx_Debug*2_1}>On&nbsp;
+			<input type="radio" value="0" name="Con_Tx_Debug*2" ${Con_Tx_Debug*2_0}>Off</td>
+		<td>
+			<input type="submit" value="Debug State" name="Set_Tx_Debug_State"></td>
+	</form></tr>
+	<tr><form method="POST">
+		<td>Scrambler Dis.</td>
+		<td>
+			<input type="radio" value="1" name="Con_Tx_Debug*3" ${Con_Tx_Debug*3_1}>On&nbsp;
+			<input type="radio" value="0" name="Con_Tx_Debug*3" ${Con_Tx_Debug*3_0}>Off</td>
+		<td>
+			<input type="submit" value="Debug State" name="Set_Tx_Debug_State"></td>
+	</form></tr>
+	<tr><form method="POST">
+		<td>Modulation</td>
+	    <td>
+	    	<select size="1" name="Con_Tx_Mod">
+				<option ${Con_TxMod_Sel*1} value="1">${Con_TxModOp*1}</option>
+				<option ${Con_TxMod_Sel*2} value="2">${Con_TxModOp*2}</option>
+				<option ${Con_TxMod_Sel*3} value="3">${Con_TxModOp*3}</option>
+				<option ${Con_TxMod_Sel*6} value="6">${Con_TxModOp*6}</option>
+			</select></td>
+	    <td>
+	    	<input type="submit" value="Modulation" name="Set_Tx_Mod"></td>
+	</form></tr>
+	<tr><form method="POST">
+		<td>Encoder Rate<br>
+			Coded size</td>
+		<td>
+			<select size="1" name="Con_Encoder_rate">
+				<option ${Con_Enc_R_Sel*0} value="0">${Con_Enc_R_Op*0}</option>
+				<option ${Con_Enc_R_Sel*1} value="1">${Con_Enc_R_Op*1}</option>
+				<option ${Con_Enc_R_Sel*2} value="2">${Con_Enc_R_Op*2}</option>
+				<option ${Con_Enc_R_Sel*3} value="3">${Con_Enc_R_Op*3}</option>
+				<option ${Con_Enc_R_Sel*4} value="4">${Con_Enc_R_Op*4}</option>
+				<option ${Con_Enc_R_Sel*5} value="5">${Con_Enc_R_Op*5}</option>
+				<option ${Con_Enc_R_Sel*6} value="6">${Con_Enc_R_Op*6}</option>
+				<option ${Con_Enc_R_Sel*7} value="7">${Con_Enc_R_Op*7}</option>
+				<option ${Con_Enc_R_Sel*8} value="8">${Con_Enc_R_Op*8}</option>
+				<option ${Con_Enc_R_Sel*9} value="9">${Con_Enc_R_Op*9}</option>
+				<option ${Con_Enc_R_Sel*10} value="10">${Con_Enc_R_Op*10}</option>
+			</select><br>
+			<select size="1" name="Con_Encoder_Size">
+				<option ${Con_Enc_S_Sel*0} value="0">${Con_Enc_S_Op*0}</option>
+				<option ${Con_Enc_S_Sel*1} value="1">${Con_Enc_S_Op*1}</option>
+			</select></td>
+		<td>
+			<input type="submit" value="Encoder" name="Set_Encoder"></td>
+	</form></tr>
+	<tr><form method="POST">
+		<td>CW</td>
+		<td>
+			<input type="radio" value="1" name="Con_Tx_Debug*0" ${Con_Tx_Debug*0_1}>On&nbsp;
+			<input type="radio" value="0" name="Con_Tx_Debug*0" ${Con_Tx_Debug*0_0}>Off</td>
+		<td>
+			<input type="submit" value="Debug State" name="Set_Tx_Debug_State"></td>
+	</form></tr>
+	<tr><form method=post>
+		<td>BB Freq.</td>
+	    <td>
+	    	<input name="Con_BBFreq" size="4" value="${Con_BBFreq}">MHz</td>
+	    <td>
+			<input type="submit" value="Set" name="Set_BB_Freq"></td>
+	</form></tr>
+	 	<tr><form method=post>
+		<td>TCXO</td>
+		<td><input type="text" value="${TCXO}" name="TCXO" size="6" /></td>
+		<td><input type="submit" value="Set" name="Set_TCXO"></td>
+	</form></tr>
+	 	<tr><form method=post>
+		<td>Band</td>
+		<td>
+			<input type="radio" value="1" name="Set_band" ${set_band*1}>High&nbsp;
+			<input type="radio" value="0" name="Set_band" ${set_band*0}>Low</td>
+		<td>
+			<input type="submit" value="Set" name="Set_set_band"></td>
+	</form></tr>
+		<tr><form method=post>
+		<td>Frequency Channel Tx</td>
+		<td><input type="text" value="${set_freq_ch*1}" name="set_freq_ch*1" size="6">&nbsp;<font size="2">1- 1000</font></td>
+		<td><input type="submit" value="Set" name="Set_set_freq_ch"></td>
+	</form></tr>
+	<tr><form method=post>
+		<td>All</td>
+	    <td>Default Values</td>
+	    <td>
+	    	<input type="submit" value="Set Defaults" name="Con_Set_Tx_Defaults"></td>
+	</form></tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

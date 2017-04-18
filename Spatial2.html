@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Spatial</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>Spatial - Control</h1>
+	<table >
+	<col style="width:35%"><col style="width:50%"><col style="width:15%">
+		<tr>
+			<th>Parameter</th>
+			<th>Value</th>
+			<th>Action</th>
+		</tr>
+		<tr><form method="POST">
+			<td>Azimuth Phase Shift<br>
+			Elevation Phase Shift</td>
+			<td>
+				<input type="checkbox" name="TRCV_PS_Az*0" value=18000 ${TRCV_PS_Az_Check*0}>180&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" name="TRCV_PS_Az*1" value=9000 ${TRCV_PS_Az_Check*1}>90&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" name="TRCV_PS_Az*2" value=4500 ${TRCV_PS_Az_Check*2}>45&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" name="TRCV_PS_Az*3" value=2250 ${TRCV_PS_Az_Check*3}>22.5&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" name="TRCV_PS_Az*4" value=1125 ${TRCV_PS_Az_Check*4}>11.25
+				<br>
+				<input type="checkbox" name="TRCV_PS_El*0" value=18000 ${TRCV_PS_El_Check*0}>180&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" name="TRCV_PS_El*1" value=9000 ${TRCV_PS_El_Check*1}>90&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" name="TRCV_PS_El*2" value=4500 ${TRCV_PS_El_Check*2}>45&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" name="TRCV_PS_El*3" value=2250 ${TRCV_PS_El_Check*3}>22.5&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" name="TRCV_PS_El*4" value=1125 ${TRCV_PS_El_Check*4}>11.25
+			</td>
+			<td>
+				<input type="submit" value="Set" name="TRCV_Set_PS"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>Antenna Select</td>
+			<td>
+				<input type="radio" value="0" ${TRCV_Ant_Sel*0} name="TRCV_Ant">Narrow&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="1" ${TRCV_Ant_Sel*1} name="TRCV_Ant">Wide&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="2" ${TRCV_Ant_Sel*2} name="TRCV_Ant">Auto
+			<td>
+				<input type="submit" value="Set" name="TRCV_Set_Ant"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>Azimuth/Elevation Selection</td>
+			<td>
+				<input type="radio" value="0" ${TRCV_Az_El_Sel*0} name="TRCV_Az_El">Manual-Azimuth&nbsp;&nbsp;
+				<input type="radio" value="1" ${TRCV_Az_El_Sel*1} name="TRCV_Az_El">Manual-Elevation&nbsp;&nbsp;
+				<input type="radio" value="2" ${TRCV_Az_El_Sel*2} name="TRCV_Az_El">Auto</td>
+			<td>
+				<input type="submit" value="Set" name="TRCV_Set_Az_El"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>0/180 Selection</td>
+			<td>
+				<input type="radio" value="0" ${TRCV_0_180_Sel*0} name="TRCV_0_180">Manual-0&nbsp;&nbsp;
+				<input type="radio" value="1" ${TRCV_0_180_Sel*1} name="TRCV_0_180">Manual-180&nbsp;&nbsp;
+				<input type="radio" value="2" ${TRCV_0_180_Sel*2} name="TRCV_0_180">Auto</td>
+			<td>
+				<input type="submit" value="Set" name="TRCV_Set_0_180"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>Test AM</td>
+			<td>
+				<input type="radio" value="1" ${SCC_AM_Sel*1} name="SCC_AM">Test&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" value="0" ${SCC_AM_Sel*0} name="SCC_AM">Normal
+			<td>
+				<input type="submit" value="Set" name="Set_SCC_AM"></td>
+		</form></tr>
+		<tr><form method="POST">
+			<td>Monopulse Northing</td>
+	            <td>
+	                <input type="radio" value="1" name="Con_RxLoop*13" ${Con_RxLoop*13_1} >Force On&nbsp;&nbsp;
+					<input type="radio" value="0" name="Con_RxLoop*13" ${Con_RxLoop*13_0} >Normal</td>
+	            <td>
+					<input type="submit" value="Loop Enable" name="Set_RxLoop"></td>
+		</form></tr>
+	</table>
+</body>
+</html>

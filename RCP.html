@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>RCP</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>RCP <font size=3>(<a target=_top href="FramesetStatRCP.html">Goto RCP Statistics</a>)</font></h1>
+<table>
+<col style="width:40%"><col style="width:40%"><col style="width:20%">
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+		<th>Action</th>
+	</tr>
+	<tr><form method=POST>
+		<td>Bypass All RCP Commands</td>
+		<td>
+			<input type="checkbox" name="RCP_Bypass*0" value=1 ${RCP_Bypass*0}></td>
+		<td>
+			<input type="submit" value="Bypass" name="Set_RCP_Bypass*0"></td>
+	</form></tr>
+	<tr><form method=POST>
+		<td>Bypass RCP Pointing Vector</td>
+		<td>
+			<input type="checkbox" name="RCP_Bypass*1" value=1 ${RCP_Bypass*1}></td>
+		<td>
+			<input type="submit" value="Bypass" name="Set_RCP_Bypass*1"></td>
+	</form></tr>
+</table>
+</body>
+</html>

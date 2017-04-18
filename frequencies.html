@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Frequencies</title>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+<style type="text/css">
+ input { font-family:monospace;
+        width: 90px;
+    }
+</style>
+</head>
+<body>
+<h1>Frequencies - ${Ver_xDLS}</h1>
+<table>
+<col style="width:40%"><col style="width:50%"><col style="width:10%">
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+		<th>Action</th>
+	</tr>
+ 	<tr><form method=post>
+		<td>Frequency Base High Downlink</td>
+		<td>
+	        <input type="text" value="${Freq_Base_HI_D}" name="Freq_Base_HI_D" size="6" />
+		<td>
+			<input type="submit" value="Set" name="Set_Freq_Base_HI_D"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>Frequency Base High Uplink</td>
+		<td>
+	        <input type="text" value="${Freq_Base_HI_U}" name="Freq_Base_HI_U" size="6" />
+		<td>
+			<input type="submit" value="Set" name="Set_Freq_Base_HI_U"></td>
+	</form></tr>
+	 	<tr><form method=post>
+		<td>Frequency Base Low Downlink</td>
+		<td>
+	        <input type="text" value="${Freq_Base_LO_D}" name="Freq_Base_LO_D" size="6" />
+		<td>
+			<input type="submit" value="Set" name="Set_Freq_Base_LO_D"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>Frequency Base Low Uplink</td>
+		<td>
+	        <input type="text" value="${Freq_Base_LO_U}" name="Freq_Base_LO_U" size="6" />
+		<td>
+			<input type="submit" value="Set" name="Set_Freq_Base_LO_U"></td>
+	</form></tr>
+ 	<tr><form method=post>
+		<td>Frequency Step</td>
+		<td>
+	        <input type="text" value="${Freq_Base_Step}" name="Freq_Base_Step" size="6" />
+		<td>
+			<input type="submit" value="Set" name="Set_Freq_Base_Step"></td>
+	</form></tr>	
+	 	<tr><form method=post>
+		<td>Default Band</td>
+		<td>
+			<input type="radio" value="1" name="default_band" ${default_band*1}>High&nbsp;
+			<input type="radio" value="0" name="default_band" ${default_band*0}>Low</td>
+		<td>
+			<input type="submit" value="Set" name="Set_default_band"></td>
+	</form></tr>
+	    <tr><form method=post>
+		<td>Default CH Uplink</td>
+		<td><input type="text" value="${def_ch_uplink}" name="def_ch_uplink" size="6">&nbsp;<font size="2">1- 1000</font></td>
+		<td><input type="submit" value="Set" name="Set_def_ch_uplink"></td>
+	</form></tr>
+    <tr><form method=post>
+		<td>Default CH Downlink</td>
+		<td><input type="text" value="${def_ch_downlink}" name="def_ch_downlink" size="6">&nbsp;<font size="2">1- 1000</font></td>
+		<td><input type="submit" value="Set" name="Set_def_ch_downlink"></td>
+	</form></tr>		
+</table>
+${Param_Response}
+</body>
+</html>

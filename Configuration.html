@@ -1,0 +1,193 @@
+<html>
+<head>
+<title>Configuration</title>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+<style type="text/css">
+ input { font-family:monospace; }
+</style>
+</head>
+<body>
+<h1>Configuration - ${Ver_xDLS}</h1>
+${Param_Response} 
+<br>
+<table>
+<col style="width:38%"><col style="width:52%"><col style="width:10%">
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+		<th>Action</th>
+	</tr>
+	<tr><form method="post">
+		<td>IP Address</td>
+		<td class="monospace_input">
+			<input type="text" value="${IP_Addr*0}" name="IP_Addr*0" size="3" maxlength="3" />.
+			<input type="text" value="${IP_Addr*1}" name="IP_Addr*1" size="3" maxlength="3" />.
+			<input type="text" value="${IP_Addr*2}" name="IP_Addr*2" size="3" maxlength="3" />.
+			<input type="text" value="${IP_Addr*3}" name="IP_Addr*3" size="3" maxlength="3" />
+		</td>
+		<td><input type="submit" value="Set" name="Set_IP_Addr" /></td>
+	</form></tr>
+	<tr><form method="post">
+		<td>IP Subnet Mask</td>
+		<td class="monospace_input">
+          	<input type="text" value="${IP_Subnet*0}" name="IP_Subnet*0" size="3" maxlength="3" />.
+			<input type="text" value="${IP_Subnet*1}" name="IP_Subnet*1" size="3" maxlength="3" />.
+			<input type="text" value="${IP_Subnet*2}" name="IP_Subnet*2" size="3" maxlength="3" />.
+ 			<input type="text" value="${IP_Subnet*3}" name="IP_Subnet*3" size="3" maxlength="3" />
+		</td>
+ 		<td><input type="submit" value="Set" name="Set_IP_Subnet"></td>
+ 	</form></tr>
+ 	<tr><form method="post">
+		<td>MAC Address</td>
+		<td class="monospace_input">
+	        <input type="text" value="${Mac_Addr*0}" name="Mac_Addr*0" size="2" maxlength="2" />-
+          	<input type="text" value="${Mac_Addr*1}" name="Mac_Addr*1" size="2" maxlength="2" />-
+          	<input type="text" value="${Mac_Addr*2}" name="Mac_Addr*2" size="2" maxlength="2" />-
+          	<input type="text" value="${Mac_Addr*3}" name="Mac_Addr*3" size="2" maxlength="2" />-
+          	<input type="text" value="${Mac_Addr*4}" name="Mac_Addr*4" size="2" maxlength="2" />-
+          	<input type="text" value="${Mac_Addr*5}" name="Mac_Addr*5" size="2" maxlength="2" />
+		</td>
+		<td><input type="submit" value="Set" name="Set_Mac_Addr"></td>
+	</form></tr>
+	<tr><form method="post">
+		<td>xDLS Type</td>
+		<td>
+		    <input type="radio" value="1" ${Set_XDLS*1} name="SetXDLS" >ADLS
+		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="0" ${Set_XDLS*0} name="SetXDLS" >GDLS<br>
+		</td>
+		<td><input type="submit" value="Set" name="Set_XDLS"></td>
+	</form></tr>
+    <tr><form method="post">
+		<td>xTRU SN</td>
+		<td><input type="text" value="${xTRU_SN}" name="xTRU_SN" size="6" /></td>
+		<td><input type="submit" value="Set" name="Set_xTRU_SN"></td>
+	</form></tr>
+    <tr><form method="post">
+		<td>SW Release</td>
+		<td><input type="text" value="${Release_Num}" name="Release_Num" size="6" /></td>
+		<td><input type="submit" value="Set" name="Set_Release_Num"></td>
+	</form></tr>
+    <tr><form method="post">
+		<td>Manual Imagery Destination</td>
+		<td>
+		    <input type="radio" value="1" ${SetImgSess*1} name="SetImgSess" >On&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="0" ${SetImgSess*0} name="SetImgSess" >Off
+		</td>
+		<td><input type="submit" value="Set" name="Set_Img_Sess"></td>
+	</form></tr>
+    <tr><form method="post">
+		<td>Manual Imagery Dest. IP<p>Manual Imagery Dest. Port</td>
+		<td>
+			<input type="text" value="${IP_DAddr*0}" name="IP_DAddr*0" size="3" maxlength="3" />.
+			<input type="text" value="${IP_DAddr*1}" name="IP_DAddr*1" size="3" maxlength="3" />.
+			<input type="text" value="${IP_DAddr*2}" name="IP_DAddr*2" size="3" maxlength="3" />.
+			<input type="text" value="${IP_DAddr*3}" name="IP_DAddr*3" size="3" maxlength="3" />
+			<p><input type="text" value="${IP_DPort}" name="IP_DPort" size="6" maxlength="6" /></td>
+		<td><input type="submit" value="Set" name="Set_IP_DAddr"></td>
+	</form></tr>
+    <tr><form method="post">
+		<td>Transparent Ethernet</td>
+		<td>
+		    <input type="radio" value="1" ${TransparentEth*1} name="SetTransparentEth">Enable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="0" ${TransparentEth*0} name="SetTransparentEth">Disable
+		</td>
+		<td><input type="submit" value="Set" name="Set_Transparent_Eth"></td>
+	</form></tr>
+    <tr><form method="post">
+		<td>Transparent Multicast</td>
+		<td>
+		    <input type="radio" value="1" ${TransparentMC*1} name="SetTransparentMC">Transfer&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="0" ${TransparentMC*0} name="SetTransparentMC">Discard
+		</td>
+		<td><input type="submit" value="Set" name="Set_Transparent_MC"></td>
+	</form></tr>
+</table>
+<h2>Routing Parameters</h2>
+<form method="post">
+<table>
+<colgroup><col style="width:16%"><col style="width:23%"><col style="width:23%"><col style="width:30%"><col style="width:8%"></colgroup>
+	<tr>
+		<th>Router Node</th>
+		<th>Subnet</th>
+		<th>Mask</th>
+        <th>TRCV_C enable reflection</th>
+        <th>Action</th>
+	</tr>
+    <tr>
+        <td>Slot 0</td>
+	    <td class="monospace_input">
+		    <input type="text" value="${RouterNodeSubnet*0_0}" name="RouterNodeSubnet*0_0" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeSubnet*1_0}" name="RouterNodeSubnet*1_0" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeSubnet*2_0}" name="RouterNodeSubnet*2_0" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeSubnet*3_0}" name="RouterNodeSubnet*3_0" size="3" maxlength="3" />
+        </td>
+	    <td class="monospace_input">
+		    <input type="text" value="${RouterNodeMask*0_0}" name="RouterNodeMask*0_0" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeMask*1_0}" name="RouterNodeMask*1_0" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeMask*2_0}" name="RouterNodeMask*2_0" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeMask*3_0}" name="RouterNodeMask*3_0" size="3" maxlength="3" />
+        </td>
+   		<td class="${ADLS_Only*N}">
+            <input type="checkbox" name="RouterEnableMsgReflection*0" value="1" ${RouterEnableMsgReflection*0} />        
+        </td>
+    </tr>
+    <tr>
+        <td>Slot 1</td>
+	    <td class="monospace_input">
+		    <input type="text" value="${RouterNodeSubnet*0_1}" name="RouterNodeSubnet*0_1" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeSubnet*1_1}" name="RouterNodeSubnet*1_1" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeSubnet*2_1}" name="RouterNodeSubnet*2_1" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeSubnet*3_1}" name="RouterNodeSubnet*3_1" size="3" maxlength="3" />
+        </td>
+	    <td class="monospace_input">
+		    <input type="text" value="${RouterNodeMask*0_1}" name="RouterNodeMask*0_1" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeMask*1_1}" name="RouterNodeMask*1_1" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeMask*2_1}" name="RouterNodeMask*2_1" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeMask*3_1}" name="RouterNodeMask*3_1" size="3" maxlength="3" />
+        </td>
+        <td class="${ADLS_Only*N}">
+            <input type="checkbox" name="RouterEnableMsgReflection*1" value="1" ${RouterEnableMsgReflection*1} />        
+        </td>
+    </tr>
+    <tr>
+        <td>Ethernet</td>
+	    <td class="monospace_input">
+		    <input type="text" value="${RouterNodeSubnet*0_2}" name="RouterNodeSubnet*0_2" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeSubnet*1_2}" name="RouterNodeSubnet*1_2" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeSubnet*2_2}" name="RouterNodeSubnet*2_2" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeSubnet*3_2}" name="RouterNodeSubnet*3_2" size="3" maxlength="3" />
+        </td>
+	    <td class="monospace_input">
+		    <input type="text" value="${RouterNodeMask*0_2}" name="RouterNodeMask*0_2" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeMask*1_2}" name="RouterNodeMask*1_2" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeMask*2_2}" name="RouterNodeMask*2_2" size="3" maxlength="3" />.
+		    <input type="text" value="${RouterNodeMask*3_2}" name="RouterNodeMask*3_2" size="3" maxlength="3" />
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp</td>
+    </tr>
+    <tr>
+        <td>Router Selection Dynamic/Static</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>
+        <input type="radio" value="0" name="RouterEnable" ${RouterEnable*0}>Static Slot 0<br>
+        <input type="radio" value="2" name="RouterEnable" ${RouterEnable*2}>Static Slot 1<br>
+        <input type="radio" value="1" name="RouterEnable" ${RouterEnable*1}>Dyn. Router<br>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>
+        <input type="submit" value="Set Params" name="Set_RouterConfig" style="width: 100px; height: 22px; align: center"/>
+        </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

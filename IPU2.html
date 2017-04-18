@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>IPU</title>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>IPU - Control </h1>
+<table>
+<col style="width:20%"><col style="width:60%"><col style="width:20%">
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+		<th>Action&nbsp;</th>
+	</tr>
+	<tr><form method="POST">
+		<td>IPU Simulator</td>
+		<td>
+			&nbsp; Rate:&nbsp;<input type="text" value="${IPU_SimRate}" name="IPU_SimRate" size="7">&nbsp;&nbsp;Mb/s<br>
+            &nbsp;<input type="radio" value="0" ${IPU_Sim*0} name="IPU_Sim">None&nbsp;&nbsp; &nbsp;&nbsp;
+			      <input type="radio" value="2" ${IPU_Sim*2} name="IPU_Sim">Enabled, Stopped&nbsp; &nbsp;&nbsp;
+			      <input type="radio" value="3" ${IPU_Sim*3} name="IPU_Sim">Running&nbsp;&nbsp;&nbsp; 
+	    </td>
+		<td><input type="submit" value="Set Simulator" name="IPU_Set_Sim"></td>
+	</form></tr>
+	<tr><form method="POST">
+		<td>Counters</td>
+		<td>&nbsp;</td>
+		<td><input type="submit" name="Reset_IPU_Comm_Faults" value="Reset Counters"></td>
+	</form></tr>
+</table>
+</body>
+</html>

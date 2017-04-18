@@ -1,0 +1,194 @@
+<html>
+<head>
+<title>ACU</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*1}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+  <h1>ACU - Monitor <font size="3">(<a target=_top href="FramesetStatACU.html">Goto ACU Statistics</a>)</font></h1>
+	<table style="background-color:white; border-style:none; padding-top:0;">
+	<col style="width:50%"><col style="width:50%">
+		<tr style="border-style:none;">
+			<td style="border-style:none; height:100%;">
+				<table style="height:100%;">
+				<col style="width:60%"><col style="width:40%">
+					<tr>
+						<th>Parameter</th>
+						<th>Value</th>
+					</tr>
+					<tr>
+						<td>ACU Comm.</td>
+						<td>${ACU_Comm_status}</td>
+					</tr>
+					</table>
+			</td>
+			<td style="border-style:none; height:100%;">
+				<table style="height:100%;">
+				<col style="width:60%"><col style="width:40%">
+					<tr>
+						<th>Parameter</th>
+						<th>Value</th>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					</table>
+			</td>
+		</tr>
+	</table>
+		<br>
+	<table style="background-color:white; border-style:none; padding-top:0;">
+	<col style="width:50%"><col style="width:50%">
+			<tr style="border-style:none;">
+				<td style="border-style:none; height:100%;">
+					<table style="height:100%;">
+				<col style="width:60%"><col style="width:40%">
+			<tr>
+				<th>Online BIT Parameter</th>
+				<th>Value</th>
+			</tr>
+			<tr>
+				<td>ACU +5V</td>
+				<td>${ACU_Online_BIT*0}</td>
+			</tr>
+			<tr>
+				<td>ACU +12V</td>
+				<td>${ACU_Online_BIT*1}</td>
+			</tr>
+			<tr>
+				<td>Reserved</td>
+				<td>NA</td>
+			</tr>
+			<tr>
+				<td>ACU -12V</td>
+				<td>${ACU_Online_BIT*2}</td>
+			</tr>
+			<tr>
+				<td>GPS Comm.</td>
+				<td>${ACU_Online_BIT*4}</td>
+			</tr>
+			<tr>
+				<td>GTRU Comm.</td>
+				<td>${ACU_Online_BIT*5}</td>
+			</tr>
+			<tr>
+				<td>Pedestal Comm.</td>
+				<td>${ACU_Online_BIT*6}</td>
+			</tr>
+			<tr>
+				<td>Azimuth DSA</td>
+				<td>${ACU_Online_BIT*7}</td>
+			</tr>
+			<tr>
+				<td>Elevation DSA</td>
+				<td>${ACU_Online_BIT*8}</td>
+			</tr>
+			<tr>
+				<td>Lim. Up</td>
+				<td>${ACU_Online_BIT*9}</td>
+			</tr>
+			<tr>
+				<td>Lim. Down</td>
+				<td>${ACU_Online_BIT*10}</td>
+			</tr>
+			<tr>
+				<td>RSSI</td>
+				<td>${ACU_Online_BIT*11}</td>
+			</tr>
+			<tr>
+				<td>Safe SW</td>
+				<td>${ACU_Online_BIT*12}</td>
+			</tr>
+			<tr>
+				<td>OPT_ADAP</td>
+				<td>${ACU_Online_BIT*13}</td>
+			</tr>
+			<tr>
+				<td>Inclinometer Comm.</td>
+				<td>${ACU_Online_BIT*14}</td>
+			</tr>
+			<tr>
+				<td>FRCINCLMTR</td>
+				<td>${ACU_Online_BIT*15}</td>
+			</tr>
+		</table>
+	</td>
+			<td style="border-style:none; height:100%;">
+				<table style="height:100%;">
+				<col style="width:60%"><col style="width:40%">
+				<tr>
+					<th>OffLine BIT Parameter</th>
+					<th>Value</th>
+				</tr>
+				<tr>
+					<td>Test Run</td>
+					<td>${ACU_Offline_BIT*0}</td>
+				</tr>
+				<tr>
+					<td>Reserved</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Reserved</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Azimuth TRVL</td>
+					<td>${ACU_Offline_BIT*3}</td>
+				</tr>
+				<tr>
+					<td>Elevation TRVL</td>
+					<td>${ACU_Offline_BIT*4}</td>
+				</tr>
+				<tr>
+					<td>Azimuth Vel.</td>
+					<td>${ACU_Offline_BIT*5}</td>
+				</tr>
+				<tr>
+					<td>Elevation Vel.</td>
+					<td>${ACU_Offline_BIT*6}</td>
+				</tr>
+				<tr>
+					<td>ROM</td>
+					<td>${ACU_Offline_BIT*7}</td>
+				</tr>
+				<tr>
+					<td>RAM</td>
+					<td>${ACU_Offline_BIT*8}</td>
+				</tr>
+				<tr>
+					<td>INS. Loopback</td>
+					<td>${ACU_Offline_BIT*9}</td>
+				</tr>
+				<tr>
+					<td>GPS Loopback</td>
+					<td>${ACU_Offline_BIT*10}</td>
+				</tr>
+				<tr>
+					<td>Pedestal Loopback</td>
+					<td>${ACU_Offline_BIT*11}</td>
+				</tr>
+				<tr>
+					<td>BIOS</td>
+					<td>${ACU_Offline_BIT*12}</td>
+				</tr>
+				<tr>
+					<td>Reserved</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Reserved</td>
+					<td>NA</td>
+				</tr>
+				<tr>
+					<td>Reserved</td>
+					<td>NA</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

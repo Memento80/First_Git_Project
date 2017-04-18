@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Spatial</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*1}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+<h1>Spatial - Monitor</h1>
+	<table  style="width:100%;" align:center>
+		<col style="width:35%"><col style="width:65%">
+		<tr>
+			<th>Parameter</th>
+			<th>Value</th>
+		</tr>
+		<tr>
+			<td>Azimuth Phase Shift<br>
+			Elevation Phase Shift</td>
+			<td>
+				<input type="checkbox" disabled name="TRCV_PS_Az*0" value=18000 ${TRCV_PS_Az_Check*0}>180&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" disabled name="TRCV_PS_Az*1" value=9000 ${TRCV_PS_Az_Check*1}>90&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" disabled name="TRCV_PS_Az*2" value=4500 ${TRCV_PS_Az_Check*2}>45&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" disabled name="TRCV_PS_Az*3" value=2250 ${TRCV_PS_Az_Check*3}>22.5&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" disabled name="TRCV_PS_Az*4" value=1125 ${TRCV_PS_Az_Check*4}>11.25&nbsp;&nbsp;&nbsp;
+				(${TRCV_PS_Az_Total})
+				<br>
+				<input type="checkbox" disabled name="TRCV_PS_El*0" value=18000 ${TRCV_PS_El_Check*0}>180&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" disabled name="TRCV_PS_El*1" value=9000 ${TRCV_PS_El_Check*1}>90&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" disabled name="TRCV_PS_El*2" value=4500 ${TRCV_PS_El_Check*2}>45&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" disabled name="TRCV_PS_El*3" value=2250 ${TRCV_PS_El_Check*3}>22.5&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" disabled name="TRCV_PS_El*4" value=1125 ${TRCV_PS_El_Check*4}>11.25&nbsp;&nbsp;&nbsp;
+				(${IFU_PS_El_Total})
+			</td>
+		</tr>
+		<tr>
+			<td>Antenna Select</td>
+			<td>
+				<input type="radio" disabled ${TRCV_Ant_Man*0} name="TRCV_Ant">Narrow&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" disabled ${TRCV_Ant_Man*1} name="TRCV_Ant">Wide&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" disabled ${TRCV_Ant_Sel*2} name="TRCV_Auto">Auto
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

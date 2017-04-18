@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Ethernet</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content=${RefreshRate*1}>
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+<style>
+<!--
+p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	text-align:right;
+	direction:rtl;
+	unicode-bidi:embed;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+<body>
+<h1>Ethernet - Monitor  <font size="3"> (<a target=_top href="FramesetStatEthernet.html">Goto Ethernet Statistics</a>)</font></h1>
+<table width="711">
+<col style="width:40%"><col style="width:30%"><col style="width:30%;background-color:#ddffff">
+	<tr>
+		<th>Parameter</th>
+		<th>Local</th>
+		<th>Remote</th>
+	</tr>
+	<tr>
+		<td>MAC Address</td>
+		<td>${Ethernet_MAC}</td>
+		<td>${REthernet_MAC}</td>
+	</tr>
+	<tr>
+		<td>IP Address</td>
+		<td>${IP_Addr*0}.${IP_Addr*1}.${IP_Addr*2}.${IP_Addr*3}</td>
+		<td>${RIP_Addr}</td>
+	</tr>
+	<tr>
+		<td>ifSpeed</td>
+		<td>${Ethernet_ifSpeed}</td>
+		<td>${REthernet_ifSpeed}</td>
+	</tr>
+	<tr>
+		<td>Transparent Throughput (Mbits/sec.)</td>
+		<td>${Ethernet_TransThroughput}</td>
+		<td>${REthernet_TransThroughput}</td>
+	</tr>
+	<tr>
+		<td>Tx frames with errors</td>
+		<td>${Ethernet_Stat*0}</td>
+		<td>${REthernet_Stat*0}</td>
+	</tr>
+	<tr>
+		<td>Rx frames with errors</td>
+		<td>${Ethernet_Stat*1}</td>
+		<td>${REthernet_Stat*1}</td>
+	</tr>
+	<tr>
+		<td>Successful Tx frames</td>
+		<td>${Ethernet_Stat*2}</td>
+		<td>(Rx) ${REthernet_Stat*3}</td>
+	</tr>
+	<tr>
+		<td>Successful Rx frames</td>
+		<td>${Ethernet_Stat*3}</td>
+		<td>(Tx) ${REthernet_Stat*2}</td>
+	</tr>
+	</table>
+</body>
+</html>

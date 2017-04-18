@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>UART Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="${cssx}.css" />
+</head>
+<body>
+
+<p align="left">
+Test Values are: ${UART_Test*1}, ${UART_Test*2}<br>
+FIFO Size: 2^${UART_Width}</p>
+<hr>
+<form method="POST">
+	<p align="left">Cyclic Rate:
+		<input type="text" name="UART_Set_Rate" size="20" value="${UART_Cyclic_Rate}">millisec.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" name="UART_Cyclic_Resend" value="1" ${UART_Resend_Check}>Cyclic Resend&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" name="UART_Cyclic_Reread" value="1" ${UART_Reread_Check}>Cyclic Re-read&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" value="Set Cyclic" name="UART_Set_Cyclic"></p>
+</form>
+<hr>
+<form method="POST">
+	<p align="left">
+	<input type="submit" value="Check Rx" name="Read_Rx">&nbsp; Rx FIFO Count: ${UART_Rx_Count}&nbsp;&nbsp;
+	Rx FIFO Status: ${UART_Rx_Status}&nbsp; </p>
+	<p align="left">
+	Rx Overflow: ${UART_Rx_Overflow}
+	<input type="submit" value="Reset Overflow" name="Reset_Overflow"></p>
+</form>
+<form method="POST">
+	<p align="left">
+	<input type="submit" value="Read UART" name="Read_UART">
+	<input type="text" name="UData" size="113" value="${UART_Read}"></p>
+</form>
+</form>
+<form method="POST">
+	<p align="left">
+	<input type="submit" value="Read Partial" name="Read_Part">
+	<input type="text" size="4" name="Read_Part_len"></p>
+</form>
+<hr>
+<form method="POST">
+	<p align="left">
+	<input type="submit" value="Check Tx" name="Read_Tx">&nbsp; Tx FIFO Count: ${UART_Tx_Count}&nbsp;&nbsp;
+	Tx FIFO Status: ${UART_Tx_Status}</p>
+</form>
+<form method="POST">
+	<p align="left">
+	<input type="submit" value="Write UART" name="Write_UART">
+	<input type="text" name="Write_UART_Data" size="113"></p>
+</form>
+
+	<table align=center border="1" bgcolor="#EFEFEF" cellpadding="5">
+		<tr>
+			<td width="64" align="left" style="border-bottom-color: #0F5F73; border-bottom-width: 1"
+>
+			<p>
+<b>
+			<font color="#007EA8">Reg #</font></b></td>
+			<td width="47" align="left" style="border-bottom-color: #0F5F73; border-bottom-width: 1"
+>
+			<p>
+<b>
+			<font color="#007EA8">Value</font></b></td>
+			<td width="47" align="left" style="border-bottom-color: #0F5F73; border-bottom-width: 1"
+>
+			<b>
+			<font color="#007EA8">Operation</font></b></td>
+		</tr>
+		<tr>
+			<form name="ReadRegisterLine" method="POST">
+	            <td align="left"><p>
+
+				0x<input name="UARTReadReg" size="16" value="${UART_RReq}"></td>
+	            <td>&nbsp;0x${UART_RVal}</td>
+					<td width="47" align="left" style="border-bottom-color: #0F5F73; border-bottom-width: 1"
+>
+	            	<input type="submit" value="Read Reg. " name="UARTRead_Reg"></td>
+	        </form>
+			</tr>
+		<tr>
+			<form name="WriteRegisterLine" method="POST">
+	            <td align="left"><p>
+
+				0x<input name="UARTWriteReg" size="16" value="${UART_WReq}"></td>
+	            <td align="left"><p>
+
+				0x<input name="UARTWriteVal" size="17" value="${UART_WVal}"></td>
+	            <td align="left">
+	            	<input type="submit" value="Write Reg. " name="UARTWrite_Reg"></td>
+			</form></tr>
+		</table>
+
+</body>
+</html>
