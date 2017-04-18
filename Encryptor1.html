@@ -8,7 +8,7 @@
 <body>
 <h1>Encryptor - Monitor  <font size="3"> (<a target=_top href="FramesetStatEncryptor.html">Goto Encryptor Statistics</a>)</font></h1>
 <table>
-<col style="width:34%"><col style="width:33%"><col style="width:33%;background-color:#ddffff">
+<col style="width:30%"><col style="width:33%"><col style="width:37%;background-color:#ddffff">
 	<tr>
 		<th>Parameter</th>
 		<th>Local</th>
@@ -18,6 +18,22 @@
 		<td>Communication Status</td>
 		<td>${EncComm}</td>
 		<td>${REncComm}</td>
+	</tr>
+	<tr>
+		<td>Encryptor ID<br>
+		<br>
+&nbsp;</td>
+		<td>Local: ${ZEncID*0}<br>
+		Requested: ${ZEncID*2}<br>
+		Remote: ${ZEncID*1}</td>
+		<td>${ZEncID*5}<br>
+		<br>
+&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Keys Date (MM-YYYY)</td>
+		<td>${ZEncID*3}</td>
+		<td>${ZEncID*4}</td>
 	</tr>
 	<tr>
 		<td>Keys Loaded</td>
@@ -36,9 +52,13 @@
 	</tr>
 	<tr>
 		<td>Key Mismatch Flag</td>
-		<td> ${Keymismatch}<br>
-		Count = ${KeymismatchCount}</td>
-		<td> NA&nbsp; </td>
+		<td> ${Keymismatch}, Count = ${KeymismatchCount}</td>
+		<td> ${RKeymismatch}&nbsp; </td>
+	</tr>
+	<tr>
+		<td>Encryption Core</td>
+		<td> ${EncCore}</td>
+		<td> NA</td>
 	</tr>
 	<tr>
 		<td>Modem to Master Drop</td>
